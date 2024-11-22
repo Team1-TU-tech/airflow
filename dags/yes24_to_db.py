@@ -7,6 +7,7 @@ os.environ['LC_ALL'] = 'C'
 
 def get_data():
         from crawling.crawler import scrap_data
+        from crawling.links import get_link
         get_data = scrap_data()
         print(get_data)
 
