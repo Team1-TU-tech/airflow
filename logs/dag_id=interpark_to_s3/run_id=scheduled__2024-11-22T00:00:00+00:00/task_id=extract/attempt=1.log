@@ -1,0 +1,132 @@
+[2024-11-23T12:01:41.098+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-23T12:01:41.119+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: interpark_to_s3.extract scheduled__2024-11-22T00:00:00+00:00 [queued]>
+[2024-11-23T12:01:41.130+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: interpark_to_s3.extract scheduled__2024-11-22T00:00:00+00:00 [queued]>
+[2024-11-23T12:01:41.131+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-11-23T12:01:41.156+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonVirtualenvOperator): extract> on 2024-11-22 00:00:00+00:00
+[2024-11-23T12:01:41.163+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=84) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-23T12:01:41.164+0000] {standard_task_runner.py:72} INFO - Started process 87 to run task
+[2024-11-23T12:01:41.165+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'interpark_to_s3', 'extract', 'scheduled__2024-11-22T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmpneij8ns3']
+[2024-11-23T12:01:41.166+0000] {standard_task_runner.py:105} INFO - Job 7: Subtask extract
+[2024-11-23T12:01:41.219+0000] {task_command.py:467} INFO - Running <TaskInstance: interpark_to_s3.extract scheduled__2024-11-22T00:00:00+00:00 [running]> on host c00384863d89
+[2024-11-23T12:01:41.312+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='interpark_to_s3' AIRFLOW_CTX_TASK_ID='extract' AIRFLOW_CTX_EXECUTION_DATE='2024-11-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-11-22T00:00:00+00:00'
+[2024-11-23T12:01:41.313+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-23T12:01:41.331+0000] {baseoperator.py:416} WARNING - PythonVirtualenvOperator.execute cannot be called outside TaskInstance!
+[2024-11-23T12:01:41.333+0000] {process_utils.py:186} INFO - Executing cmd: /home/***/.local/bin/python -m virtualenv /tmp/venv_pf0jfa6 --python=python
+[2024-11-23T12:01:41.334+0000] {process_utils.py:190} INFO - Output:
+[2024-11-23T12:01:43.057+0000] {process_utils.py:194} INFO - created virtual environment CPython3.12.7.final.0-64 in 865ms
+[2024-11-23T12:01:43.058+0000] {process_utils.py:194} INFO -   creator CPython3Posix(dest=/tmp/venv_pf0jfa6, clear=False, no_vcs_ignore=False, global=False)
+[2024-11-23T12:01:43.058+0000] {process_utils.py:194} INFO -   seeder FromAppData(download=False, pip=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2024-11-23T12:01:43.058+0000] {process_utils.py:194} INFO -     added seed packages: pip==24.3.1
+[2024-11-23T12:01:43.059+0000] {process_utils.py:194} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2024-11-23T12:01:43.108+0000] {process_utils.py:186} INFO - Executing cmd: /tmp/venv_pf0jfa6/bin/pip install -r /tmp/venv_pf0jfa6/requirements.txt
+[2024-11-23T12:01:43.109+0000] {process_utils.py:190} INFO - Output:
+[2024-11-23T12:01:45.140+0000] {process_utils.py:194} INFO - Collecting https://github.com/hahahellooo/interpark.git@0.3/new_crawling (from -r /tmp/venv_pf0jfa6/requirements.txt (line 1))
+[2024-11-23T12:01:45.455+0000] {process_utils.py:194} INFO -   ERROR: HTTP error 404 while getting https://github.com/hahahellooo/interpark.git@0.3/new_crawling
+[2024-11-23T12:01:45.711+0000] {process_utils.py:194} INFO - ERROR: Could not install requirement https://github.com/hahahellooo/interpark.git@0.3/new_crawling (from -r /tmp/venv_pf0jfa6/requirements.txt (line 1)) because of HTTP error 404 Client Error: Not Found for url: https://github.com/hahahellooo/interpark.git@0.3/new_crawling for URL https://github.com/hahahellooo/interpark.git@0.3/new_crawling
+[2024-11-23T12:01:45.869+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 505, in execute
+    return super().execute(context=serializable_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 868, in execute_callable
+    self._prepare_venv(tmp_path)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 769, in _prepare_venv
+    prepare_virtualenv(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/python_virtualenv.py", line 119, in prepare_virtualenv
+    execute_in_subprocess(pip_cmd)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/process_utils.py", line 175, in execute_in_subprocess
+    execute_in_subprocess_with_kwargs(cmd, cwd=cwd, env=env)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/process_utils.py", line 198, in execute_in_subprocess_with_kwargs
+    raise subprocess.CalledProcessError(exit_code, cmd)
+subprocess.CalledProcessError: Command '['/tmp/venv_pf0jfa6/bin/pip', 'install', '-r', '/tmp/venv_pf0jfa6/requirements.txt']' returned non-zero exit status 1.
+[2024-11-23T12:01:45.900+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=interpark_to_s3, task_id=extract, run_id=scheduled__2024-11-22T00:00:00+00:00, execution_date=20241122T000000, start_date=20241123T120141, end_date=20241123T120145
+[2024-11-23T12:01:45.922+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-23T12:01:45.923+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 7 for task extract (Command '['/tmp/venv_pf0jfa6/bin/pip', 'install', '-r', '/tmp/venv_pf0jfa6/requirements.txt']' returned non-zero exit status 1.; 87)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 505, in execute
+    return super().execute(context=serializable_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 868, in execute_callable
+    self._prepare_venv(tmp_path)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 769, in _prepare_venv
+    prepare_virtualenv(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/python_virtualenv.py", line 119, in prepare_virtualenv
+    execute_in_subprocess(pip_cmd)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/process_utils.py", line 175, in execute_in_subprocess
+    execute_in_subprocess_with_kwargs(cmd, cwd=cwd, env=env)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/process_utils.py", line 198, in execute_in_subprocess_with_kwargs
+    raise subprocess.CalledProcessError(exit_code, cmd)
+subprocess.CalledProcessError: Command '['/tmp/venv_pf0jfa6/bin/pip', 'install', '-r', '/tmp/venv_pf0jfa6/requirements.txt']' returned non-zero exit status 1.
+[2024-11-23T12:01:45.971+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2024-11-23T12:01:45.995+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-23T12:01:46.001+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
