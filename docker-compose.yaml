@@ -57,23 +57,30 @@ services:
   # Airflow Worker
   airflow-worker:
     build: .
-    #image: apache/airflow:2.10.3
     container_name: airflow-worker
     depends_on:
       - airflow-init
       - kafka
     environment:
       <<: *airflow-common-env
+      GOOGLE_CHROME_BIN: "/usr/bin/google-chrome"
+      CHROMEDRIVER_PATH: "/usr/local/bin/chromedriver"
+      AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+      AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+      AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+    
     volumes:
       - ${AIRFLOW_PROJ_DIR:-.}/dags:/opt/airflow/dags
       - ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs
       - ${AIRFLOW_PROJ_DIR:-.}/config:/opt/airflow/config
       - ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
     restart: always
-    #user: root
-    #command: >
-      #bash -c "apt update && apt install git -y && celery worker"
     command: celery worker
+    deploy:
+      resources:
+        limits:
+          memory: 2g
+          cpus: "1.0"
 
   # Airflow Triggerer
   airflow-triggerer:
