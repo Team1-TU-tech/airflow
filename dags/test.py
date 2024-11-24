@@ -5,8 +5,8 @@ import os
 
 
 def get_data():
-        from interpark.raw_interpark import extract_html
-        get_data = extract_html()
+        from interpark.test import extract_container_html
+        get_data = extract_container_html()
         print(get_data)
 
 with DAG(
