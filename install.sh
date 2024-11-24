@@ -11,12 +11,6 @@ wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.de
 apt install -y ./google-chrome-stable_current_amd64.deb
 rm google-chrome-stable_current_amd64.deb
 
-# Chromedriver 설치
-wget -O /tmp/chromedriver.zip "http://chromedriver.storage.googleapis.com/`curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE`/chromedriver_linux64.zip"
-unzip /tmp/chromedriver.zip -d /usr/local/bin/
-chmod +x /usr/local/bin/chromedriver
-rm /tmp/chromedriver.zip
-
 # AWS CLI 설치
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip

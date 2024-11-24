@@ -6,7 +6,7 @@ import os
 
 def get_data():
         from interpark.test import extract_container_html
-        get_data = extract_container_html
+        get_data = extract_container_html()
         print(get_data)
 
 with DAG(
@@ -18,9 +18,8 @@ default_args={
 'retries': 1,
 },
 description='interpark DAG',
-schedule_interval='@daily',
 start_date=datetime(2024, 11, 21),
-catchup=True,
+catchup=False,
 tags=['interpark'],
 ) as dag:
     extract = PythonVirtualenvOperator(

@@ -1,0 +1,310 @@
+[2024-11-23T16:02:57.916+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-23T16:02:57.937+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: interpark_to_s3.extract scheduled__2024-11-21T00:00:00+00:00 [queued]>
+[2024-11-23T16:02:57.947+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: interpark_to_s3.extract scheduled__2024-11-21T00:00:00+00:00 [queued]>
+[2024-11-23T16:02:57.948+0000] {taskinstance.py:2866} INFO - Starting attempt 11 of 12
+[2024-11-23T16:02:57.966+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonVirtualenvOperator): extract> on 2024-11-21 00:00:00+00:00
+[2024-11-23T16:02:57.971+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=77) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-23T16:02:57.973+0000] {standard_task_runner.py:72} INFO - Started process 80 to run task
+[2024-11-23T16:02:57.974+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'interpark_to_s3', 'extract', 'scheduled__2024-11-21T00:00:00+00:00', '--job-id', '49', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmpm9o_rtnh']
+[2024-11-23T16:02:57.975+0000] {standard_task_runner.py:105} INFO - Job 49: Subtask extract
+[2024-11-23T16:02:58.023+0000] {task_command.py:467} INFO - Running <TaskInstance: interpark_to_s3.extract scheduled__2024-11-21T00:00:00+00:00 [running]> on host e2f98aefb9d6
+[2024-11-23T16:02:58.109+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='interpark_to_s3' AIRFLOW_CTX_TASK_ID='extract' AIRFLOW_CTX_EXECUTION_DATE='2024-11-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='11' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-11-21T00:00:00+00:00'
+[2024-11-23T16:02:58.110+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-23T16:02:58.139+0000] {baseoperator.py:416} WARNING - PythonVirtualenvOperator.execute cannot be called outside TaskInstance!
+[2024-11-23T16:02:58.140+0000] {process_utils.py:186} INFO - Executing cmd: /home/***/.local/bin/python -m virtualenv /tmp/venv5pctw4xf --python=python
+[2024-11-23T16:02:58.141+0000] {process_utils.py:190} INFO - Output:
+[2024-11-23T16:02:59.613+0000] {process_utils.py:194} INFO - created virtual environment CPython3.12.7.final.0-64 in 662ms
+[2024-11-23T16:02:59.613+0000] {process_utils.py:194} INFO -   creator CPython3Posix(dest=/tmp/venv5pctw4xf, clear=False, no_vcs_ignore=False, global=False)
+[2024-11-23T16:02:59.614+0000] {process_utils.py:194} INFO -   seeder FromAppData(download=False, pip=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2024-11-23T16:02:59.615+0000] {process_utils.py:194} INFO -     added seed packages: pip==24.3.1
+[2024-11-23T16:02:59.615+0000] {process_utils.py:194} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2024-11-23T16:02:59.668+0000] {process_utils.py:186} INFO - Executing cmd: /tmp/venv5pctw4xf/bin/pip install -r /tmp/venv5pctw4xf/requirements.txt
+[2024-11-23T16:02:59.669+0000] {process_utils.py:190} INFO - Output:
+[2024-11-23T16:03:01.579+0000] {process_utils.py:194} INFO - Collecting git+https://github.com/hahahellooo/interpark.git@0.3/new_crawling (from -r /tmp/venv5pctw4xf/requirements.txt (line 1))
+[2024-11-23T16:03:01.580+0000] {process_utils.py:194} INFO -   Cloning https://github.com/hahahellooo/interpark.git (to revision 0.3/new_crawling) to /tmp/pip-req-build-1q2tf14y
+[2024-11-23T16:03:01.583+0000] {process_utils.py:194} INFO -   Running command git clone --filter=blob:none --quiet https://github.com/hahahellooo/interpark.git /tmp/pip-req-build-1q2tf14y
+[2024-11-23T16:03:02.999+0000] {process_utils.py:194} INFO -   Running command git checkout -b 0.3/new_crawling --track origin/0.3/new_crawling
+[2024-11-23T16:03:03.599+0000] {process_utils.py:194} INFO -   Switched to a new branch '0.3/new_crawling'
+[2024-11-23T16:03:03.600+0000] {process_utils.py:194} INFO -   branch '0.3/new_crawling' set up to track 'origin/0.3/new_crawling'.
+[2024-11-23T16:03:03.601+0000] {process_utils.py:194} INFO -   Resolved https://github.com/hahahellooo/interpark.git to commit d2ab75a632be9f578ac04be0e85d884befd10f87
+[2024-11-23T16:03:03.607+0000] {process_utils.py:194} INFO -   Installing build dependencies: started
+[2024-11-23T16:03:06.891+0000] {process_utils.py:194} INFO -   Installing build dependencies: finished with status 'done'
+[2024-11-23T16:03:06.892+0000] {process_utils.py:194} INFO -   Getting requirements to build wheel: started
+[2024-11-23T16:03:04.919+0000] {process_utils.py:194} INFO -   Getting requirements to build wheel: finished with status 'done'
+[2024-11-23T16:03:04.921+0000] {process_utils.py:194} INFO -   Preparing metadata (pyproject.toml): started
+[2024-11-23T16:03:05.821+0000] {process_utils.py:194} INFO -   Preparing metadata (pyproject.toml): finished with status 'done'
+[2024-11-23T16:03:05.984+0000] {process_utils.py:194} INFO - Collecting selenium>=4.26.1 (from interpark==0.1.2->-r /tmp/venv5pctw4xf/requirements.txt (line 1))
+[2024-11-23T16:03:06.048+0000] {process_utils.py:194} INFO -   Downloading selenium-4.26.1-py3-none-any.whl.metadata (7.1 kB)
+[2024-11-23T16:03:06.128+0000] {process_utils.py:194} INFO - Collecting beautifulsoup4>=4.12.3 (from interpark==0.1.2->-r /tmp/venv5pctw4xf/requirements.txt (line 1))
+[2024-11-23T16:03:06.136+0000] {process_utils.py:194} INFO -   Downloading beautifulsoup4-4.12.3-py3-none-any.whl.metadata (3.8 kB)
+[2024-11-23T16:03:06.219+0000] {process_utils.py:194} INFO - Collecting soupsieve>1.2 (from beautifulsoup4>=4.12.3->interpark==0.1.2->-r /tmp/venv5pctw4xf/requirements.txt (line 1))
+[2024-11-23T16:03:06.228+0000] {process_utils.py:194} INFO -   Downloading soupsieve-2.6-py3-none-any.whl.metadata (4.6 kB)
+[2024-11-23T16:03:06.379+0000] {process_utils.py:194} INFO - Collecting urllib3<3,>=1.26 (from urllib3[socks]<3,>=1.26->selenium>=4.26.1->interpark==0.1.2->-r /tmp/venv5pctw4xf/requirements.txt (line 1))
+[2024-11-23T16:03:06.389+0000] {process_utils.py:194} INFO -   Downloading urllib3-2.2.3-py3-none-any.whl.metadata (6.5 kB)
+[2024-11-23T16:03:06.470+0000] {process_utils.py:194} INFO - Collecting trio~=0.17 (from selenium>=4.26.1->interpark==0.1.2->-r /tmp/venv5pctw4xf/requirements.txt (line 1))
+[2024-11-23T16:03:06.481+0000] {process_utils.py:194} INFO -   Downloading trio-0.27.0-py3-none-any.whl.metadata (8.6 kB)
+[2024-11-23T16:03:06.557+0000] {process_utils.py:194} INFO - Collecting trio-websocket~=0.9 (from selenium>=4.26.1->interpark==0.1.2->-r /tmp/venv5pctw4xf/requirements.txt (line 1))
+[2024-11-23T16:03:06.566+0000] {process_utils.py:194} INFO -   Downloading trio_websocket-0.11.1-py3-none-any.whl.metadata (4.7 kB)
+[2024-11-23T16:03:06.669+0000] {process_utils.py:194} INFO - Collecting certifi>=2021.10.8 (from selenium>=4.26.1->interpark==0.1.2->-r /tmp/venv5pctw4xf/requirements.txt (line 1))
+[2024-11-23T16:03:06.684+0000] {process_utils.py:194} INFO -   Downloading certifi-2024.8.30-py3-none-any.whl.metadata (2.2 kB)
+[2024-11-23T16:03:06.764+0000] {process_utils.py:194} INFO - Collecting typing_extensions~=4.9 (from selenium>=4.26.1->interpark==0.1.2->-r /tmp/venv5pctw4xf/requirements.txt (line 1))
+[2024-11-23T16:03:06.774+0000] {process_utils.py:194} INFO -   Downloading typing_extensions-4.12.2-py3-none-any.whl.metadata (3.0 kB)
+[2024-11-23T16:03:06.870+0000] {process_utils.py:194} INFO - Collecting websocket-client~=1.8 (from selenium>=4.26.1->interpark==0.1.2->-r /tmp/venv5pctw4xf/requirements.txt (line 1))
+[2024-11-23T16:03:06.872+0000] {process_utils.py:194} INFO -   Using cached websocket_client-1.8.0-py3-none-any.whl.metadata (8.0 kB)
+[2024-11-23T16:03:06.948+0000] {process_utils.py:194} INFO - Collecting attrs>=23.2.0 (from trio~=0.17->selenium>=4.26.1->interpark==0.1.2->-r /tmp/venv5pctw4xf/requirements.txt (line 1))
+[2024-11-23T16:03:06.957+0000] {process_utils.py:194} INFO -   Downloading attrs-24.2.0-py3-none-any.whl.metadata (11 kB)
+[2024-11-23T16:03:07.078+0000] {process_utils.py:194} INFO - Collecting sortedcontainers (from trio~=0.17->selenium>=4.26.1->interpark==0.1.2->-r /tmp/venv5pctw4xf/requirements.txt (line 1))
+[2024-11-23T16:03:07.088+0000] {process_utils.py:194} INFO -   Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl.metadata (10 kB)
+[2024-11-23T16:03:07.189+0000] {process_utils.py:194} INFO - Collecting idna (from trio~=0.17->selenium>=4.26.1->interpark==0.1.2->-r /tmp/venv5pctw4xf/requirements.txt (line 1))
+[2024-11-23T16:03:07.197+0000] {process_utils.py:194} INFO -   Downloading idna-3.10-py3-none-any.whl.metadata (10 kB)
+[2024-11-23T16:03:07.281+0000] {process_utils.py:194} INFO - Collecting outcome (from trio~=0.17->selenium>=4.26.1->interpark==0.1.2->-r /tmp/venv5pctw4xf/requirements.txt (line 1))
+[2024-11-23T16:03:07.289+0000] {process_utils.py:194} INFO -   Downloading outcome-1.3.0.post0-py2.py3-none-any.whl.metadata (2.6 kB)
+[2024-11-23T16:03:07.362+0000] {process_utils.py:194} INFO - Collecting sniffio>=1.3.0 (from trio~=0.17->selenium>=4.26.1->interpark==0.1.2->-r /tmp/venv5pctw4xf/requirements.txt (line 1))
+[2024-11-23T16:03:07.370+0000] {process_utils.py:194} INFO -   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+[2024-11-23T16:03:07.453+0000] {process_utils.py:194} INFO - Collecting wsproto>=0.14 (from trio-websocket~=0.9->selenium>=4.26.1->interpark==0.1.2->-r /tmp/venv5pctw4xf/requirements.txt (line 1))
+[2024-11-23T16:03:07.462+0000] {process_utils.py:194} INFO -   Downloading wsproto-1.2.0-py3-none-any.whl.metadata (5.6 kB)
+[2024-11-23T16:03:07.533+0000] {process_utils.py:194} INFO - Collecting pysocks!=1.5.7,<2.0,>=1.5.6 (from urllib3[socks]<3,>=1.26->selenium>=4.26.1->interpark==0.1.2->-r /tmp/venv5pctw4xf/requirements.txt (line 1))
+[2024-11-23T16:03:07.544+0000] {process_utils.py:194} INFO -   Downloading PySocks-1.7.1-py3-none-any.whl.metadata (13 kB)
+[2024-11-23T16:03:07.617+0000] {process_utils.py:194} INFO - Collecting h11<1,>=0.9.0 (from wsproto>=0.14->trio-websocket~=0.9->selenium>=4.26.1->interpark==0.1.2->-r /tmp/venv5pctw4xf/requirements.txt (line 1))
+[2024-11-23T16:03:07.627+0000] {process_utils.py:194} INFO -   Downloading h11-0.14.0-py3-none-any.whl.metadata (8.2 kB)
+[2024-11-23T16:03:07.675+0000] {process_utils.py:194} INFO - Downloading beautifulsoup4-4.12.3-py3-none-any.whl (147 kB)
+[2024-11-23T16:03:07.740+0000] {process_utils.py:194} INFO - Downloading selenium-4.26.1-py3-none-any.whl (9.7 MB)
+[2024-11-23T16:03:09.804+0000] {process_utils.py:194} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.7/9.7 MB 4.8 MB/s eta 0:00:00
+[2024-11-23T16:03:09.806+0000] {process_utils.py:194} INFO - Using cached certifi-2024.8.30-py3-none-any.whl (167 kB)
+[2024-11-23T16:03:09.808+0000] {process_utils.py:194} INFO - Using cached soupsieve-2.6-py3-none-any.whl (36 kB)
+[2024-11-23T16:03:09.809+0000] {process_utils.py:194} INFO - Using cached trio-0.27.0-py3-none-any.whl (481 kB)
+[2024-11-23T16:03:09.814+0000] {process_utils.py:194} INFO - Using cached trio_websocket-0.11.1-py3-none-any.whl (17 kB)
+[2024-11-23T16:03:09.823+0000] {process_utils.py:194} INFO - Downloading typing_extensions-4.12.2-py3-none-any.whl (37 kB)
+[2024-11-23T16:03:09.887+0000] {process_utils.py:194} INFO - Downloading urllib3-2.2.3-py3-none-any.whl (126 kB)
+[2024-11-23T16:03:09.943+0000] {process_utils.py:194} INFO - Downloading websocket_client-1.8.0-py3-none-any.whl (58 kB)
+[2024-11-23T16:03:09.997+0000] {process_utils.py:194} INFO - Downloading attrs-24.2.0-py3-none-any.whl (63 kB)
+[2024-11-23T16:03:10.045+0000] {process_utils.py:194} INFO - Downloading PySocks-1.7.1-py3-none-any.whl (16 kB)
+[2024-11-23T16:03:10.090+0000] {process_utils.py:194} INFO - Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+[2024-11-23T16:03:10.139+0000] {process_utils.py:194} INFO - Downloading wsproto-1.2.0-py3-none-any.whl (24 kB)
+[2024-11-23T16:03:10.188+0000] {process_utils.py:194} INFO - Downloading idna-3.10-py3-none-any.whl (70 kB)
+[2024-11-23T16:03:10.256+0000] {process_utils.py:194} INFO - Downloading outcome-1.3.0.post0-py2.py3-none-any.whl (10 kB)
+[2024-11-23T16:03:10.292+0000] {process_utils.py:194} INFO - Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+[2024-11-23T16:03:10.347+0000] {process_utils.py:194} INFO - Downloading h11-0.14.0-py3-none-any.whl (58 kB)
+[2024-11-23T16:03:10.428+0000] {process_utils.py:194} INFO - Building wheels for collected packages: interpark
+[2024-11-23T16:03:10.435+0000] {process_utils.py:194} INFO -   Building wheel for interpark (pyproject.toml): started
+[2024-11-23T16:03:11.519+0000] {process_utils.py:194} INFO -   Building wheel for interpark (pyproject.toml): finished with status 'done'
+[2024-11-23T16:03:11.520+0000] {process_utils.py:194} INFO -   Created wheel for interpark: filename=interpark-0.1.2-py3-none-any.whl size=17701 sha256=ca71539c381ed0a9d466e767b2c9930596d71b9aba2863b1e9872e966f00253d
+[2024-11-23T16:03:11.520+0000] {process_utils.py:194} INFO -   Stored in directory: /tmp/pip-ephem-wheel-cache-isp8b5dd/wheels/3b/e3/3f/2198c53e48ab1c477124eda1522aad636d2590cc0e6349feda
+[2024-11-23T16:03:11.522+0000] {process_utils.py:194} INFO - Successfully built interpark
+[2024-11-23T16:03:11.562+0000] {process_utils.py:194} INFO - Installing collected packages: sortedcontainers, websocket-client, urllib3, typing_extensions, soupsieve, sniffio, pysocks, idna, h11, certifi, attrs, wsproto, outcome, beautifulsoup4, trio, trio-websocket, selenium, interpark
+[2024-11-23T16:03:16.819+0000] {process_utils.py:194} INFO - Successfully installed attrs-24.2.0 beautifulsoup4-4.12.3 certifi-2024.8.30 h11-0.14.0 idna-3.10 interpark-0.1.2 outcome-1.3.0.post0 pysocks-1.7.1 selenium-4.26.1 sniffio-1.3.1 sortedcontainers-2.4.0 soupsieve-2.6 trio-0.27.0 trio-websocket-0.11.1 typing_extensions-4.12.2 urllib3-2.2.3 websocket-client-1.8.0 wsproto-1.2.0
+[2024-11-23T16:03:17.236+0000] {process_utils.py:186} INFO - Executing cmd: /tmp/venv5pctw4xf/bin/python /tmp/venv-callmpj7i72p/script.py /tmp/venv-callmpj7i72p/script.in /tmp/venv-callmpj7i72p/script.out /tmp/venv-callmpj7i72p/string_args.txt /tmp/venv-callmpj7i72p/termination.log
+[2024-11-23T16:03:17.237+0000] {process_utils.py:190} INFO - Output:
+[2024-11-23T16:03:18.685+0000] {process_utils.py:194} INFO - The chromedriver version (114.0.5735.90) detected in PATH at /usr/local/bin/chromedriver might not be compatible with the detected chrome version (131.0.6778.85); currently, chromedriver 131.0.6778.85 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry
+[2024-11-23T16:03:18.887+0000] {process_utils.py:194} INFO - Traceback (most recent call last):
+[2024-11-23T16:03:18.888+0000] {process_utils.py:194} INFO -   File "/tmp/venv-callmpj7i72p/script.py", line 48, in <module>
+[2024-11-23T16:03:18.888+0000] {process_utils.py:194} INFO -     res = get_data(*arg_dict["args"], **arg_dict["kwargs"])
+[2024-11-23T16:03:18.888+0000] {process_utils.py:194} INFO -           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-11-23T16:03:18.889+0000] {process_utils.py:194} INFO -   File "/tmp/venv-callmpj7i72p/script.py", line 20, in get_data
+[2024-11-23T16:03:18.889+0000] {process_utils.py:194} INFO -     get_data = extract_container_html()
+[2024-11-23T16:03:18.889+0000] {process_utils.py:194} INFO -                ^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-11-23T16:03:18.889+0000] {process_utils.py:194} INFO -   File "/tmp/venv5pctw4xf/lib/python3.12/site-packages/interpark/test.py", line 19, in extract_container_html
+[2024-11-23T16:03:18.890+0000] {process_utils.py:194} INFO -     driver = webdriver.Chrome(options=chrome_options)
+[2024-11-23T16:03:18.890+0000] {process_utils.py:194} INFO -              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-11-23T16:03:18.890+0000] {process_utils.py:194} INFO -   File "/tmp/venv5pctw4xf/lib/python3.12/site-packages/selenium/webdriver/chrome/webdriver.py", line 45, in __init__
+[2024-11-23T16:03:18.890+0000] {process_utils.py:194} INFO -     super().__init__(
+[2024-11-23T16:03:18.891+0000] {process_utils.py:194} INFO -   File "/tmp/venv5pctw4xf/lib/python3.12/site-packages/selenium/webdriver/chromium/webdriver.py", line 66, in __init__
+[2024-11-23T16:03:18.891+0000] {process_utils.py:194} INFO -     super().__init__(command_executor=executor, options=options)
+[2024-11-23T16:03:18.892+0000] {process_utils.py:194} INFO -   File "/tmp/venv5pctw4xf/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 238, in __init__
+[2024-11-23T16:03:18.892+0000] {process_utils.py:194} INFO -     self.start_session(capabilities)
+[2024-11-23T16:03:18.892+0000] {process_utils.py:194} INFO -   File "/tmp/venv5pctw4xf/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 325, in start_session
+[2024-11-23T16:03:18.893+0000] {process_utils.py:194} INFO -     response = self.execute(Command.NEW_SESSION, caps)["value"]
+[2024-11-23T16:03:18.893+0000] {process_utils.py:194} INFO -                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-11-23T16:03:18.893+0000] {process_utils.py:194} INFO -   File "/tmp/venv5pctw4xf/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 380, in execute
+[2024-11-23T16:03:18.893+0000] {process_utils.py:194} INFO -     self.error_handler.check_response(response)
+[2024-11-23T16:03:18.893+0000] {process_utils.py:194} INFO -   File "/tmp/venv5pctw4xf/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+[2024-11-23T16:03:18.894+0000] {process_utils.py:194} INFO -     raise exception_class(message, screen, stacktrace)
+[2024-11-23T16:03:18.894+0000] {process_utils.py:194} INFO - selenium.common.exceptions.WebDriverException: Message: unknown error: Chrome failed to start: exited abnormally.
+[2024-11-23T16:03:18.894+0000] {process_utils.py:194} INFO -   (unknown error: DevToolsActivePort file doesn't exist)
+[2024-11-23T16:03:18.894+0000] {process_utils.py:194} INFO -   (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+[2024-11-23T16:03:18.894+0000] {process_utils.py:194} INFO - Stacktrace:
+[2024-11-23T16:03:18.894+0000] {process_utils.py:194} INFO - #0 0x5561e73d14e3 <unknown>
+[2024-11-23T16:03:18.895+0000] {process_utils.py:194} INFO - #1 0x5561e7100c76 <unknown>
+[2024-11-23T16:03:18.895+0000] {process_utils.py:194} INFO - #2 0x5561e7129d78 <unknown>
+[2024-11-23T16:03:18.895+0000] {process_utils.py:194} INFO - #3 0x5561e7126029 <unknown>
+[2024-11-23T16:03:18.895+0000] {process_utils.py:194} INFO - #4 0x5561e7164ccc <unknown>
+[2024-11-23T16:03:18.895+0000] {process_utils.py:194} INFO - #5 0x5561e716447f <unknown>
+[2024-11-23T16:03:18.895+0000] {process_utils.py:194} INFO - #6 0x5561e715bde3 <unknown>
+[2024-11-23T16:03:18.896+0000] {process_utils.py:194} INFO - #7 0x5561e71312dd <unknown>
+[2024-11-23T16:03:18.896+0000] {process_utils.py:194} INFO - #8 0x5561e713234e <unknown>
+[2024-11-23T16:03:18.896+0000] {process_utils.py:194} INFO - #9 0x5561e73913e4 <unknown>
+[2024-11-23T16:03:18.896+0000] {process_utils.py:194} INFO - #10 0x5561e73953d7 <unknown>
+[2024-11-23T16:03:18.896+0000] {process_utils.py:194} INFO - #11 0x5561e739fb20 <unknown>
+[2024-11-23T16:03:18.896+0000] {process_utils.py:194} INFO - #12 0x5561e7396023 <unknown>
+[2024-11-23T16:03:18.897+0000] {process_utils.py:194} INFO - #13 0x5561e73641aa <unknown>
+[2024-11-23T16:03:18.897+0000] {process_utils.py:194} INFO - #14 0x5561e73ba6b8 <unknown>
+[2024-11-23T16:03:18.897+0000] {process_utils.py:194} INFO - #15 0x5561e73ba847 <unknown>
+[2024-11-23T16:03:18.897+0000] {process_utils.py:194} INFO - #16 0x5561e73ca243 <unknown>
+[2024-11-23T16:03:18.897+0000] {process_utils.py:194} INFO - #17 0x7f3cec1ff144 <unknown>
+[2024-11-23T16:03:18.897+0000] {process_utils.py:194} INFO - 
+[2024-11-23T16:03:19.027+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 505, in execute
+    return super().execute(context=serializable_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 870, in execute_callable
+    result = self._execute_python_callable_in_subprocess(python_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 588, in _execute_python_callable_in_subprocess
+    raise AirflowException(error_msg) from None
+airflow.exceptions.AirflowException: Process returned non-zero exit status 1.
+Message: unknown error: Chrome failed to start: exited abnormally.
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Stacktrace:
+#0 0x5561e73d14e3 <unknown>
+#1 0x5561e7100c76 <unknown>
+#2 0x5561e7129d78 <unknown>
+#3 0x5561e7126029 <unknown>
+#4 0x5561e7164ccc <unknown>
+#5 0x5561e716447f <unknown>
+#6 0x5561e715bde3 <unknown>
+#7 0x5561e71312dd <unknown>
+#8 0x5561e713234e <unknown>
+#9 0x5561e73913e4 <unknown>
+#10 0x5561e73953d7 <unknown>
+#11 0x5561e739fb20 <unknown>
+#12 0x5561e7396023 <unknown>
+#13 0x5561e73641aa <unknown>
+#14 0x5561e73ba6b8 <unknown>
+#15 0x5561e73ba847 <unknown>
+#16 0x5561e73ca243 <unknown>
+#17 0x7f3cec1ff144 <unknown>
+
+[2024-11-23T16:03:19.035+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=interpark_to_s3, task_id=extract, run_id=scheduled__2024-11-21T00:00:00+00:00, execution_date=20241121T000000, start_date=20241123T160257, end_date=20241123T160319
+[2024-11-23T16:03:19.059+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-23T16:03:19.060+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 49 for task extract (Process returned non-zero exit status 1.
+Message: unknown error: Chrome failed to start: exited abnormally.
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Stacktrace:
+#0 0x5561e73d14e3 <unknown>
+#1 0x5561e7100c76 <unknown>
+#2 0x5561e7129d78 <unknown>
+#3 0x5561e7126029 <unknown>
+#4 0x5561e7164ccc <unknown>
+#5 0x5561e716447f <unknown>
+#6 0x5561e715bde3 <unknown>
+#7 0x5561e71312dd <unknown>
+#8 0x5561e713234e <unknown>
+#9 0x5561e73913e4 <unknown>
+#10 0x5561e73953d7 <unknown>
+#11 0x5561e739fb20 <unknown>
+#12 0x5561e7396023 <unknown>
+#13 0x5561e73641aa <unknown>
+#14 0x5561e73ba6b8 <unknown>
+#15 0x5561e73ba847 <unknown>
+#16 0x5561e73ca243 <unknown>
+#17 0x7f3cec1ff144 <unknown>
+; 80)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 505, in execute
+    return super().execute(context=serializable_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 870, in execute_callable
+    result = self._execute_python_callable_in_subprocess(python_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 588, in _execute_python_callable_in_subprocess
+    raise AirflowException(error_msg) from None
+airflow.exceptions.AirflowException: Process returned non-zero exit status 1.
+Message: unknown error: Chrome failed to start: exited abnormally.
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Stacktrace:
+#0 0x5561e73d14e3 <unknown>
+#1 0x5561e7100c76 <unknown>
+#2 0x5561e7129d78 <unknown>
+#3 0x5561e7126029 <unknown>
+#4 0x5561e7164ccc <unknown>
+#5 0x5561e716447f <unknown>
+#6 0x5561e715bde3 <unknown>
+#7 0x5561e71312dd <unknown>
+#8 0x5561e713234e <unknown>
+#9 0x5561e73913e4 <unknown>
+#10 0x5561e73953d7 <unknown>
+#11 0x5561e739fb20 <unknown>
+#12 0x5561e7396023 <unknown>
+#13 0x5561e73641aa <unknown>
+#14 0x5561e73ba6b8 <unknown>
+#15 0x5561e73ba847 <unknown>
+#16 0x5561e73ca243 <unknown>
+#17 0x7f3cec1ff144 <unknown>
+
+[2024-11-23T16:03:19.102+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2024-11-23T16:03:19.127+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-23T16:03:19.134+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
