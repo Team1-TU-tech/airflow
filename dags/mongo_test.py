@@ -2,6 +2,7 @@ from datetime import datetime
 from datetime import timedelta
 from airflow import DAG
 from airflow.operators.python import PythonVirtualenvOperator
+from airflow.models import Variable
 import os
 
 def get_data(MONGO_URI):
@@ -34,7 +35,7 @@ catchup=False,
 tags=['interpark','mongdb']
 ) as dag:
 
-    mongo_uri = os.getenv("MONGO_URI")
+    #mongo_uri = os.getenv("MONGO_URI")
     mongo_uri = Variable.get("MONGO_URI")
 
     extract = PythonVirtualenvOperator(
@@ -43,9 +44,9 @@ tags=['interpark','mongdb']
             requirements=[
                 "git+https://github.com/hahahellooo/interpark.git@0.3/new_crawling",
                 ],
-            system_site_packages=False,
-            op_kwargs={"mongo_uri": mongo_uri},           
-            )
+            system_site_packages=True,
+            op_kwargs={"MONGO_URI": mongo_uri},           
+    )
 
 
     extract
