@@ -8,7 +8,7 @@ x-airflow-common:
     AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
     AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://airflow:airflow@postgres/airflow
     AIRFLOW__CELERY__BROKER_URL: redis://:@redis:6379/0
-    AIRFLOW__CORE__FERNET_KEY: ${AIRFLOW__CORE__FERNET_KEY}
+    AIRFLOW__CORE__FERNET_KEY: ''
     AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
     AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
     AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth,airflow.api.auth.backend.session'
@@ -44,13 +44,15 @@ services:
   airflow-webserver:
     <<: *airflow-common
     command: webserver
+    env_file:
+      - .env
     ports:
       - "8080:8080"
     restart: always
     depends_on:
       - kafka
       - airflow-init
-
+    
   airflow-scheduler:
     <<: *airflow-common
     command: scheduler
@@ -66,12 +68,23 @@ services:
       <<: *airflow-common-env
       GOOGLE_CHROME_BIN: "/usr/bin/google-chrome"
       CHROMEDRIVER_PATH: "/usr/local/bin/chromedriver"
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      AWS_DEFAULT_REGION: ${AWS_DEFAULT_REGION}
+      MONGO_URI: ${MONGO_URI}
       DUMB_INIT_SETSID: "0"
     restart: always
+    env_file:
+      - .env
     depends_on:
       - kafka
       - airflow-init
-
+    deploy:
+      resources:
+        limits:
+          memory: 4g
+          cpus: "2.0"
+          
   airflow-triggerer:
     <<: *airflow-common
     command: triggerer
@@ -88,15 +101,20 @@ services:
       - |
         mkdir -p /sources/logs /sources/dags /sources/plugins
         chown -R "${AIRFLOW_UID}:0" /sources/{logs,dags,plugins}
-        exec /entrypoint airflow version
-    # yamllint enable rule:line-length
+        airflow db init &&
+        airflow users create \
+          --username ${AIRFLOW_WWW_USER_USERNAME} \
+          --password ${AIRFLOW_WWW_USER_PASSWORD} \
+          --firstname ${AIRFLOW_WWW_USER_FIRSTNAME} \
+          --lastname ${AIRFLOW_WWW_USER_LASTNAME} \
+          --role Admin \
+          --email ${AIRFLOW_WWW_USER_EMAIL} &&
+          airflow variables set MONGO_URI ${MONGO_URI} &&
+          echo "Airflow Initialized"
+    env_file:
+      - .env
     environment:
       <<: *airflow-common-env
-      _AIRFLOW_DB_MIGRATE: 'true'
-      _AIRFLOW_WWW_USER_CREATE: 'true'
-      _AIRFLOW_WWW_USER_USERNAME: ${AIRFLOW_WWW_USER_USERNAME}
-      _AIRFLOW_WWW_USER_PASSWORD: ${AIRFLOW_WWW_USER_PASSWORD}
-      _PIP_ADDITIONAL_REQUIREMENTS: ''
     user: "0:0"
     volumes:
       - ${AIRFLOW_PROJ_DIR:-.}:/sources

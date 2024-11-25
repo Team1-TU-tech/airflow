@@ -1,0 +1,63 @@
+[2024-11-25T07:37:01.462+0000] {processor.py:186} INFO - Started process (PID=196) to work on /opt/airflow/dags/test.py
+[2024-11-25T07:37:01.462+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2024-11-25T07:37:01.464+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:37:01.463+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2024-11-25T07:37:01.479+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_s3' retrieved from /opt/airflow/dags/test.py
+[2024-11-25T07:37:01.512+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:37:01.511+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T07:37:01.708+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:37:01.707+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_s3 to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T07:37:01.734+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test.py took 0.278 seconds
+[2024-11-25T07:37:32.190+0000] {processor.py:186} INFO - Started process (PID=200) to work on /opt/airflow/dags/test.py
+[2024-11-25T07:37:32.200+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2024-11-25T07:37:32.201+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:37:32.200+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2024-11-25T07:37:32.217+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_s3' retrieved from /opt/airflow/dags/test.py
+[2024-11-25T07:37:32.397+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:37:32.397+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T07:37:32.419+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:37:32.419+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_s3 to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T07:37:32.442+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test.py took 0.258 seconds
+[2024-11-25T07:38:02.758+0000] {processor.py:186} INFO - Started process (PID=203) to work on /opt/airflow/dags/test.py
+[2024-11-25T07:38:02.759+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2024-11-25T07:38:02.761+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:38:02.760+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2024-11-25T07:38:02.777+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_s3' retrieved from /opt/airflow/dags/test.py
+[2024-11-25T07:38:02.813+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:38:02.813+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T07:38:02.844+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:38:02.843+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_s3 to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T07:38:02.872+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test.py took 0.123 seconds
+[2024-11-25T07:38:33.168+0000] {processor.py:186} INFO - Started process (PID=206) to work on /opt/airflow/dags/test.py
+[2024-11-25T07:38:33.171+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2024-11-25T07:38:33.172+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:38:33.172+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2024-11-25T07:38:33.188+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_s3' retrieved from /opt/airflow/dags/test.py
+[2024-11-25T07:38:33.222+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:38:33.222+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T07:38:33.257+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:38:33.256+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_s3 to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T07:38:33.282+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test.py took 0.121 seconds
+[2024-11-25T07:39:03.580+0000] {processor.py:186} INFO - Started process (PID=209) to work on /opt/airflow/dags/test.py
+[2024-11-25T07:39:03.583+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2024-11-25T07:39:03.584+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:39:03.584+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2024-11-25T07:39:03.598+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_s3' retrieved from /opt/airflow/dags/test.py
+[2024-11-25T07:39:03.630+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:39:03.630+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T07:39:03.803+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:39:03.803+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_s3 to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T07:39:03.827+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test.py took 0.254 seconds
+[2024-11-25T07:39:34.143+0000] {processor.py:186} INFO - Started process (PID=212) to work on /opt/airflow/dags/test.py
+[2024-11-25T07:39:34.153+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2024-11-25T07:39:34.154+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:39:34.154+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2024-11-25T07:39:34.171+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_s3' retrieved from /opt/airflow/dags/test.py
+[2024-11-25T07:39:34.206+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:39:34.205+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T07:39:34.396+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:39:34.396+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_s3 to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T07:39:34.420+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test.py took 0.284 seconds
+[2024-11-25T07:40:04.732+0000] {processor.py:186} INFO - Started process (PID=215) to work on /opt/airflow/dags/test.py
+[2024-11-25T07:40:04.742+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2024-11-25T07:40:04.743+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:40:04.743+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2024-11-25T07:40:04.762+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_s3' retrieved from /opt/airflow/dags/test.py
+[2024-11-25T07:40:04.953+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:40:04.952+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T07:40:04.981+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:40:04.981+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_s3 to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T07:40:05.010+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test.py took 0.287 seconds
+[2024-11-25T07:40:35.320+0000] {processor.py:186} INFO - Started process (PID=218) to work on /opt/airflow/dags/test.py
+[2024-11-25T07:40:35.322+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2024-11-25T07:40:35.323+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:40:35.323+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2024-11-25T07:40:35.526+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_s3' retrieved from /opt/airflow/dags/test.py
+[2024-11-25T07:40:35.552+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:40:35.552+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T07:40:35.574+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:40:35.574+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_s3 to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T07:40:35.598+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test.py took 0.285 seconds
+[2024-11-25T07:41:06.030+0000] {processor.py:186} INFO - Started process (PID=221) to work on /opt/airflow/dags/test.py
+[2024-11-25T07:41:06.040+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2024-11-25T07:41:06.042+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:41:06.041+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2024-11-25T07:41:06.058+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_s3' retrieved from /opt/airflow/dags/test.py
+[2024-11-25T07:41:06.088+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:41:06.088+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T07:41:06.111+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:41:06.111+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_s3 to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T07:41:06.137+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test.py took 0.113 seconds

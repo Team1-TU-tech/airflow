@@ -1,0 +1,70 @@
+[2024-11-25T07:37:01.469+0000] {processor.py:186} INFO - Started process (PID=197) to work on /opt/airflow/dags/raw_open_s3.py
+[2024-11-25T07:37:01.470+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/raw_open_s3.py for tasks to queue
+[2024-11-25T07:37:01.471+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:37:01.471+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/raw_open_s3.py
+[2024-11-25T07:37:01.487+0000] {processor.py:925} INFO - DAG(s) 'open_interpark_to_S3' retrieved from /opt/airflow/dags/raw_open_s3.py
+[2024-11-25T07:37:01.829+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:37:01.828+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T07:37:01.849+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:37:01.849+0000] {dag.py:4180} INFO - Setting next_dagrun for open_interpark_to_S3 to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T07:37:01.879+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/raw_open_s3.py took 0.416 seconds
+[2024-11-25T07:37:03.852+0000] {processor.py:186} INFO - Started process (PID=199) to work on /opt/airflow/dags/raw_open_s3.py
+[2024-11-25T07:37:03.853+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/raw_open_s3.py for tasks to queue
+[2024-11-25T07:37:03.855+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:37:03.854+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/raw_open_s3.py
+[2024-11-25T07:37:03.873+0000] {processor.py:925} INFO - DAG(s) 'open_interpark_to_S3' retrieved from /opt/airflow/dags/raw_open_s3.py
+[2024-11-25T07:37:03.891+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:37:03.891+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T07:37:04.066+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:37:04.066+0000] {dag.py:4180} INFO - Setting next_dagrun for open_interpark_to_S3 to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T07:37:04.090+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/raw_open_s3.py took 0.245 seconds
+[2024-11-25T07:37:34.292+0000] {processor.py:186} INFO - Started process (PID=202) to work on /opt/airflow/dags/raw_open_s3.py
+[2024-11-25T07:37:34.302+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/raw_open_s3.py for tasks to queue
+[2024-11-25T07:37:34.303+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:37:34.303+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/raw_open_s3.py
+[2024-11-25T07:37:34.319+0000] {processor.py:925} INFO - DAG(s) 'open_interpark_to_S3' retrieved from /opt/airflow/dags/raw_open_s3.py
+[2024-11-25T07:37:34.497+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:37:34.497+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T07:37:34.520+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:37:34.519+0000] {dag.py:4180} INFO - Setting next_dagrun for open_interpark_to_S3 to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T07:37:34.554+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/raw_open_s3.py took 0.269 seconds
+[2024-11-25T07:38:04.856+0000] {processor.py:186} INFO - Started process (PID=205) to work on /opt/airflow/dags/raw_open_s3.py
+[2024-11-25T07:38:04.865+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/raw_open_s3.py for tasks to queue
+[2024-11-25T07:38:04.866+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:38:04.866+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/raw_open_s3.py
+[2024-11-25T07:38:04.883+0000] {processor.py:925} INFO - DAG(s) 'open_interpark_to_S3' retrieved from /opt/airflow/dags/raw_open_s3.py
+[2024-11-25T07:38:04.916+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:38:04.916+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T07:38:04.942+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:38:04.941+0000] {dag.py:4180} INFO - Setting next_dagrun for open_interpark_to_S3 to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T07:38:04.972+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/raw_open_s3.py took 0.123 seconds
+[2024-11-25T07:38:35.266+0000] {processor.py:186} INFO - Started process (PID=208) to work on /opt/airflow/dags/raw_open_s3.py
+[2024-11-25T07:38:35.289+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/raw_open_s3.py for tasks to queue
+[2024-11-25T07:38:35.291+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:38:35.290+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/raw_open_s3.py
+[2024-11-25T07:38:35.307+0000] {processor.py:925} INFO - DAG(s) 'open_interpark_to_S3' retrieved from /opt/airflow/dags/raw_open_s3.py
+[2024-11-25T07:38:35.338+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:38:35.338+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T07:38:35.366+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:38:35.366+0000] {dag.py:4180} INFO - Setting next_dagrun for open_interpark_to_S3 to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T07:38:35.563+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/raw_open_s3.py took 0.304 seconds
+[2024-11-25T07:39:05.670+0000] {processor.py:186} INFO - Started process (PID=211) to work on /opt/airflow/dags/raw_open_s3.py
+[2024-11-25T07:39:05.673+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/raw_open_s3.py for tasks to queue
+[2024-11-25T07:39:05.675+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:39:05.675+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/raw_open_s3.py
+[2024-11-25T07:39:05.695+0000] {processor.py:925} INFO - DAG(s) 'open_interpark_to_S3' retrieved from /opt/airflow/dags/raw_open_s3.py
+[2024-11-25T07:39:05.726+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:39:05.725+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T07:39:05.904+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:39:05.903+0000] {dag.py:4180} INFO - Setting next_dagrun for open_interpark_to_S3 to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T07:39:05.927+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/raw_open_s3.py took 0.263 seconds
+[2024-11-25T07:39:36.251+0000] {processor.py:186} INFO - Started process (PID=214) to work on /opt/airflow/dags/raw_open_s3.py
+[2024-11-25T07:39:36.261+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/raw_open_s3.py for tasks to queue
+[2024-11-25T07:39:36.262+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:39:36.262+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/raw_open_s3.py
+[2024-11-25T07:39:36.277+0000] {processor.py:925} INFO - DAG(s) 'open_interpark_to_S3' retrieved from /opt/airflow/dags/raw_open_s3.py
+[2024-11-25T07:39:36.309+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:39:36.309+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T07:39:36.488+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:39:36.487+0000] {dag.py:4180} INFO - Setting next_dagrun for open_interpark_to_S3 to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T07:39:36.513+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/raw_open_s3.py took 0.268 seconds
+[2024-11-25T07:40:06.827+0000] {processor.py:186} INFO - Started process (PID=217) to work on /opt/airflow/dags/raw_open_s3.py
+[2024-11-25T07:40:06.837+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/raw_open_s3.py for tasks to queue
+[2024-11-25T07:40:06.839+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:40:06.838+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/raw_open_s3.py
+[2024-11-25T07:40:06.855+0000] {processor.py:925} INFO - DAG(s) 'open_interpark_to_S3' retrieved from /opt/airflow/dags/raw_open_s3.py
+[2024-11-25T07:40:07.045+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:40:07.045+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T07:40:07.067+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:40:07.067+0000] {dag.py:4180} INFO - Setting next_dagrun for open_interpark_to_S3 to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T07:40:07.089+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/raw_open_s3.py took 0.269 seconds
+[2024-11-25T07:40:37.605+0000] {processor.py:186} INFO - Started process (PID=220) to work on /opt/airflow/dags/raw_open_s3.py
+[2024-11-25T07:40:37.615+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/raw_open_s3.py for tasks to queue
+[2024-11-25T07:40:37.616+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:40:37.616+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/raw_open_s3.py
+[2024-11-25T07:40:37.778+0000] {processor.py:925} INFO - DAG(s) 'open_interpark_to_S3' retrieved from /opt/airflow/dags/raw_open_s3.py
+[2024-11-25T07:40:37.802+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:40:37.802+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T07:40:37.825+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:40:37.824+0000] {dag.py:4180} INFO - Setting next_dagrun for open_interpark_to_S3 to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T07:40:37.844+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/raw_open_s3.py took 0.248 seconds
+[2024-11-25T07:41:08.128+0000] {processor.py:186} INFO - Started process (PID=223) to work on /opt/airflow/dags/raw_open_s3.py
+[2024-11-25T07:41:08.129+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/raw_open_s3.py for tasks to queue
+[2024-11-25T07:41:08.132+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:41:08.131+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/raw_open_s3.py
+[2024-11-25T07:41:08.145+0000] {processor.py:925} INFO - DAG(s) 'open_interpark_to_S3' retrieved from /opt/airflow/dags/raw_open_s3.py
+[2024-11-25T07:41:08.180+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:41:08.179+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T07:41:08.203+0000] {logging_mixin.py:190} INFO - [2024-11-25T07:41:08.203+0000] {dag.py:4180} INFO - Setting next_dagrun for open_interpark_to_S3 to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T07:41:08.230+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/raw_open_s3.py took 0.108 seconds
