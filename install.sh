@@ -1,4 +1,7 @@
 #!/bin/bash
+
+CHROMEDRIVER_VERSION=$(curl -s https://chromedriver.storage.googleapis.com/LATEST_RELEASE)
+
 set -e  # 에러 발생 시 즉시 종료
 
 # 패키지 업데이트 및 필수 라이브러리 설치
@@ -12,7 +15,7 @@ apt install -y ./google-chrome-stable_current_amd64.deb
 rm google-chrome-stable_current_amd64.deb
 
 # Chromedriver 설치
-wget -O /tmp/chromedriver.zip "http://chromedriver.storage.googleapis.com/`curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE`/chromedriver_linux64.zip"
+wget -O /tmp/chromedriver.zip "https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip"
 unzip /tmp/chromedriver.zip -d /usr/local/bin/
 chmod +x /usr/local/bin/chromedriver
 rm /tmp/chromedriver.zip
