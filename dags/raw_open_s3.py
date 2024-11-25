@@ -14,6 +14,7 @@ def upload_to_s3():
             raise ValueError("extract_open_html()에서 None이 반환되었습니다.")
         hook = S3Hook(aws_conn_id='interpark')
         bucket_name = 't1-tu-data'
+        print(data["num"])
         key = f'interpark/{data["num"]}.html'
         try:
             # 데이터를 문자열로 가정하고 io.StringIO로 처리

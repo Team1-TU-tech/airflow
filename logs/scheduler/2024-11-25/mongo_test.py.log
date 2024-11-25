@@ -4409,3 +4409,759 @@ NameError: name 'Variable' is not defined. Did you mean: 'callable'?
 [2024-11-25T11:34:39.573+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:34:39.572+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2024-11-25T11:34:39.622+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:34:39.621+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
 [2024-11-25T11:34:39.673+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.207 seconds
+[2024-11-25T11:35:10.017+0000] {processor.py:186} INFO - Started process (PID=1688) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:35:10.020+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:35:10.022+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:35:10.022+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:35:10.071+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:35:10.102+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:35:10.102+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:35:10.144+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:35:10.144+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:35:10.190+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.185 seconds
+[2024-11-25T11:35:40.869+0000] {processor.py:186} INFO - Started process (PID=1692) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:35:40.880+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:35:40.884+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:35:40.882+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:35:40.939+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:35:40.970+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:35:40.969+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:35:41.013+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:35:41.013+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:35:41.059+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.201 seconds
+[2024-11-25T11:36:11.383+0000] {processor.py:186} INFO - Started process (PID=1696) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:36:11.385+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:36:11.387+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:36:11.387+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:36:11.434+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:36:11.458+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:36:11.458+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:36:11.492+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:36:11.491+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:36:11.531+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.164 seconds
+[2024-11-25T11:36:41.974+0000] {processor.py:186} INFO - Started process (PID=1700) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:36:41.985+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:36:41.987+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:36:41.986+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:36:42.039+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:36:42.065+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:36:42.064+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:36:42.106+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:36:42.106+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:36:42.153+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.189 seconds
+[2024-11-25T11:37:12.784+0000] {processor.py:186} INFO - Started process (PID=1704) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:37:12.787+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:37:12.789+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:37:12.789+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:37:12.829+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:37:12.854+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:37:12.854+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:37:12.888+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:37:12.888+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:37:12.928+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.153 seconds
+[2024-11-25T11:37:43.356+0000] {processor.py:186} INFO - Started process (PID=1708) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:37:43.366+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:37:43.369+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:37:43.368+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:37:43.408+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:37:43.433+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:37:43.432+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:37:43.477+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:37:43.477+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:37:43.517+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.172 seconds
+[2024-11-25T11:38:14.043+0000] {processor.py:186} INFO - Started process (PID=1712) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:38:14.047+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:38:14.049+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:38:14.048+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:38:14.126+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:38:14.164+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:38:14.163+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:38:14.213+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:38:14.213+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:38:14.267+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.239 seconds
+[2024-11-25T11:38:44.393+0000] {processor.py:186} INFO - Started process (PID=1716) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:38:44.405+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:38:44.409+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:38:44.408+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:38:44.505+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:38:44.555+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:38:44.555+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:38:44.619+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:38:44.619+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:38:44.682+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.317 seconds
+[2024-11-25T11:39:14.778+0000] {processor.py:186} INFO - Started process (PID=1720) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:39:14.781+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:39:14.785+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:39:14.783+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:39:14.853+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:39:14.892+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:39:14.891+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:39:14.957+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:39:14.957+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:39:15.016+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.263 seconds
+[2024-11-25T11:39:45.757+0000] {processor.py:186} INFO - Started process (PID=1724) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:39:45.759+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:39:45.764+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:39:45.763+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:39:45.830+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:39:45.882+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:39:45.882+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:39:45.949+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:39:45.949+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:39:46.007+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.266 seconds
+[2024-11-25T11:40:16.070+0000] {processor.py:186} INFO - Started process (PID=1728) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:40:16.073+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:40:16.076+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:40:16.076+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:40:16.148+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:40:16.195+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:40:16.194+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:40:16.263+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:40:16.262+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:40:16.332+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.280 seconds
+[2024-11-25T11:40:46.404+0000] {processor.py:186} INFO - Started process (PID=1732) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:40:46.408+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:40:46.412+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:40:46.411+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:40:46.493+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:40:46.542+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:40:46.542+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:40:46.602+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:40:46.601+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:40:46.662+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.278 seconds
+[2024-11-25T11:41:17.384+0000] {processor.py:186} INFO - Started process (PID=1736) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:41:17.386+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:41:17.391+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:41:17.389+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:41:17.459+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:41:17.499+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:41:17.498+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:41:17.559+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:41:17.558+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:41:17.617+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.249 seconds
+[2024-11-25T11:41:47.780+0000] {processor.py:186} INFO - Started process (PID=1740) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:41:47.793+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:41:47.797+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:41:47.795+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:41:47.869+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:41:47.915+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:41:47.914+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:41:47.981+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:41:47.981+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:41:48.051+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.288 seconds
+[2024-11-25T11:42:18.334+0000] {processor.py:186} INFO - Started process (PID=1744) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:42:18.348+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:42:18.352+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:42:18.350+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:42:18.429+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:42:18.477+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:42:18.477+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:42:18.565+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:42:18.565+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:42:18.614+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.300 seconds
+[2024-11-25T11:42:48.851+0000] {processor.py:186} INFO - Started process (PID=1748) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:42:48.862+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:42:48.865+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:42:48.864+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:42:48.939+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:42:48.983+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:42:48.983+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:42:49.042+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:42:49.041+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:42:49.102+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.267 seconds
+[2024-11-25T11:43:19.291+0000] {processor.py:186} INFO - Started process (PID=1752) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:43:19.295+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:43:19.297+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:43:19.297+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:43:19.371+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:43:19.420+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:43:19.419+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:43:19.512+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:43:19.511+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:43:19.572+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.298 seconds
+[2024-11-25T11:43:50.167+0000] {processor.py:186} INFO - Started process (PID=1756) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:43:50.169+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:43:50.173+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:43:50.172+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:43:50.247+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:43:50.301+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:43:50.301+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:43:50.359+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:43:50.359+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:43:50.420+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.269 seconds
+[2024-11-25T11:44:21.124+0000] {processor.py:186} INFO - Started process (PID=1760) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:44:21.133+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:44:21.136+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:44:21.135+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:44:21.217+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:44:21.271+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:44:21.271+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:44:21.375+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:44:21.373+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:44:21.455+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.348 seconds
+[2024-11-25T11:44:51.584+0000] {processor.py:186} INFO - Started process (PID=1764) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:44:51.597+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:44:51.602+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:44:51.601+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:44:51.698+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:44:51.754+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:44:51.752+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:44:51.859+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:44:51.858+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:44:51.921+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.361 seconds
+[2024-11-25T11:45:22.405+0000] {processor.py:186} INFO - Started process (PID=1768) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:45:22.409+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:45:22.414+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:45:22.413+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:45:22.491+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:45:22.540+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:45:22.539+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:45:22.637+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:45:22.637+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:45:22.704+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.321 seconds
+[2024-11-25T11:45:53.277+0000] {processor.py:186} INFO - Started process (PID=1771) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:45:53.280+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:45:53.284+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:45:53.283+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:45:53.360+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:45:53.408+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:45:53.407+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:45:53.471+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:45:53.470+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:45:53.530+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.268 seconds
+[2024-11-25T11:46:24.258+0000] {processor.py:186} INFO - Started process (PID=1775) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:46:24.260+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:46:24.265+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:46:24.262+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:46:24.347+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:46:24.405+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:46:24.405+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:46:24.475+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:46:24.475+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:46:24.527+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.286 seconds
+[2024-11-25T11:46:54.968+0000] {processor.py:186} INFO - Started process (PID=1779) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:46:54.982+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:46:54.986+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:46:54.985+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:46:55.067+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:46:55.116+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:46:55.115+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:46:55.185+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:46:55.185+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:46:55.237+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.294 seconds
+[2024-11-25T11:47:25.487+0000] {processor.py:186} INFO - Started process (PID=1783) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:47:25.498+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:47:25.501+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:47:25.500+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:47:25.569+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:47:25.613+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:47:25.612+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:47:25.667+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:47:25.667+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:47:25.732+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.260 seconds
+[2024-11-25T11:47:56.189+0000] {processor.py:186} INFO - Started process (PID=1787) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:47:56.192+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:47:56.196+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:47:56.194+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:47:56.261+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:47:56.305+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:47:56.304+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:47:56.366+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:47:56.365+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:47:56.431+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.258 seconds
+[2024-11-25T11:48:27.110+0000] {processor.py:186} INFO - Started process (PID=1791) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:48:27.115+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:48:27.118+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:48:27.118+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:48:27.195+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:48:27.244+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:48:27.244+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:48:27.337+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:48:27.335+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:48:27.417+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.327 seconds
+[2024-11-25T11:48:57.700+0000] {processor.py:186} INFO - Started process (PID=1796) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:48:57.702+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:48:57.705+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:48:57.704+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:48:57.776+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:48:57.827+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:48:57.826+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:48:57.898+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:48:57.897+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:48:57.989+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.308 seconds
+[2024-11-25T11:49:28.194+0000] {processor.py:186} INFO - Started process (PID=1800) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:49:28.205+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:49:28.207+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:49:28.206+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:49:28.262+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:49:28.295+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:49:28.295+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:49:28.353+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:49:28.352+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:49:28.402+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.222 seconds
+[2024-11-25T11:49:59.169+0000] {processor.py:186} INFO - Started process (PID=1804) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:49:59.181+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:49:59.189+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:49:59.187+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:49:59.264+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:49:59.309+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:49:59.308+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:49:59.401+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:49:59.400+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:49:59.457+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.309 seconds
+[2024-11-25T11:50:29.669+0000] {processor.py:186} INFO - Started process (PID=1808) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:50:29.673+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:50:29.677+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:50:29.676+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:50:29.751+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:50:29.796+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:50:29.795+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:50:29.865+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:50:29.864+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:50:29.925+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.278 seconds
+[2024-11-25T11:51:00.615+0000] {processor.py:186} INFO - Started process (PID=1812) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:51:00.617+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:51:00.620+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:51:00.619+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:51:00.677+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:51:00.711+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:51:00.710+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:51:00.758+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:51:00.757+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:51:00.818+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.214 seconds
+[2024-11-25T11:51:31.476+0000] {processor.py:186} INFO - Started process (PID=1816) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:51:31.481+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:51:31.491+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:51:31.489+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:51:31.597+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:51:31.656+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:51:31.655+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:51:31.734+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:51:31.734+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:51:31.799+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.344 seconds
+[2024-11-25T11:52:02.513+0000] {processor.py:186} INFO - Started process (PID=1820) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:52:02.525+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:52:02.530+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:52:02.529+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:52:02.603+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:52:02.639+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:52:02.638+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:52:02.690+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:52:02.689+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:52:02.750+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.253 seconds
+[2024-11-25T11:52:33.437+0000] {processor.py:186} INFO - Started process (PID=1824) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:52:33.440+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:52:33.442+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:52:33.442+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:52:33.502+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:52:33.544+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:52:33.543+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:52:33.596+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:52:33.596+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:52:33.638+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.215 seconds
+[2024-11-25T11:53:04.100+0000] {processor.py:186} INFO - Started process (PID=1828) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:53:04.111+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:53:04.114+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:53:04.113+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:53:04.168+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:53:04.202+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:53:04.201+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:53:04.264+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:53:04.264+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:53:04.316+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.231 seconds
+[2024-11-25T11:53:34.484+0000] {processor.py:186} INFO - Started process (PID=1832) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:53:34.496+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:53:34.499+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:53:34.498+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:53:34.574+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:53:34.629+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:53:34.628+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:53:34.698+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:53:34.697+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:53:34.757+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.294 seconds
+[2024-11-25T11:54:05.432+0000] {processor.py:186} INFO - Started process (PID=1836) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:54:05.444+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:54:05.446+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:54:05.446+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:54:05.505+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:54:05.538+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:54:05.537+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:54:05.613+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:54:05.612+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:54:05.661+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.243 seconds
+[2024-11-25T11:54:36.358+0000] {processor.py:186} INFO - Started process (PID=1840) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:54:36.369+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:54:36.372+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:54:36.370+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:54:36.431+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:54:36.469+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:54:36.468+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:54:36.526+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:54:36.526+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:54:36.578+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.234 seconds
+[2024-11-25T11:55:07.231+0000] {processor.py:186} INFO - Started process (PID=1844) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:55:07.242+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:55:07.245+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:55:07.244+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:55:07.304+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:55:07.339+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:55:07.338+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:55:07.388+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:55:07.388+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:55:07.446+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.228 seconds
+[2024-11-25T11:55:37.490+0000] {processor.py:186} INFO - Started process (PID=1848) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:55:37.493+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:55:37.496+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:55:37.495+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:55:37.546+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:55:37.582+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:55:37.582+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:55:37.631+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:55:37.630+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:55:37.678+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.200 seconds
+[2024-11-25T11:56:07.904+0000] {processor.py:186} INFO - Started process (PID=1852) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:56:07.909+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:56:07.913+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:56:07.912+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:56:07.975+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:56:08.013+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:56:08.012+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:56:08.065+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:56:08.065+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:56:08.116+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.227 seconds
+[2024-11-25T11:56:38.441+0000] {processor.py:186} INFO - Started process (PID=1856) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:56:38.449+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:56:38.458+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:56:38.455+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:56:38.665+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:56:38.791+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:56:38.789+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:56:38.988+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:56:38.986+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:56:39.116+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.731 seconds
+[2024-11-25T11:57:09.342+0000] {processor.py:186} INFO - Started process (PID=1860) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:57:09.349+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:57:09.360+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:57:09.356+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:57:09.566+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:57:09.706+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:57:09.704+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:57:09.898+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:57:09.896+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:57:10.039+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.745 seconds
+[2024-11-25T11:57:40.715+0000] {processor.py:186} INFO - Started process (PID=1863) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:57:40.724+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:57:40.734+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:57:40.731+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:57:40.919+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:57:41.043+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:57:41.041+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:57:41.221+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:57:41.219+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:57:41.351+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.680 seconds
+[2024-11-25T11:58:11.912+0000] {processor.py:186} INFO - Started process (PID=1868) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:58:11.918+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:58:11.927+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:58:11.924+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:58:12.120+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:58:12.229+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:58:12.228+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:58:12.441+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:58:12.439+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:58:12.567+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.698 seconds
+[2024-11-25T11:58:43.053+0000] {processor.py:186} INFO - Started process (PID=1872) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:58:43.060+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:58:43.074+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:58:43.071+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:58:43.244+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:58:43.349+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:58:43.348+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:58:43.522+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:58:43.520+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:58:43.652+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.652 seconds
+[2024-11-25T11:59:13.962+0000] {processor.py:186} INFO - Started process (PID=1875) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:59:13.973+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:59:13.974+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:59:13.974+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:59:14.010+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:59:14.035+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:59:14.035+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:59:14.063+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:59:14.063+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:59:14.089+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.135 seconds
+[2024-11-25T11:59:44.486+0000] {processor.py:186} INFO - Started process (PID=1879) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:59:44.493+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T11:59:44.495+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:59:44.494+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:59:44.526+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T11:59:44.543+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:59:44.543+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T11:59:44.571+0000] {logging_mixin.py:190} INFO - [2024-11-25T11:59:44.571+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T11:59:44.595+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.115 seconds
+[2024-11-25T12:00:15.055+0000] {processor.py:186} INFO - Started process (PID=1883) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:00:15.065+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:00:15.067+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:00:15.067+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:00:15.099+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:00:15.118+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:00:15.118+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:00:15.143+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:00:15.142+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:00:15.175+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.128 seconds
+[2024-11-25T12:00:45.610+0000] {processor.py:186} INFO - Started process (PID=1887) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:00:45.611+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:00:45.613+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:00:45.613+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:00:45.648+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:00:45.668+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:00:45.668+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:00:45.695+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:00:45.695+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:00:45.718+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.115 seconds
+[2024-11-25T12:01:15.794+0000] {processor.py:186} INFO - Started process (PID=1891) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:01:15.796+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:01:15.797+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:01:15.797+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:01:15.832+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:01:15.853+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:01:15.853+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:01:15.881+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:01:15.881+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:01:15.907+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.121 seconds
+[2024-11-25T12:01:46.474+0000] {processor.py:186} INFO - Started process (PID=1895) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:01:46.477+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:01:46.478+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:01:46.478+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:01:46.511+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:01:46.533+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:01:46.532+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:01:46.557+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:01:46.557+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:01:46.596+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.129 seconds
+[2024-11-25T12:02:17.049+0000] {processor.py:186} INFO - Started process (PID=1899) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:02:17.059+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:02:17.062+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:02:17.062+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:02:17.094+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:02:17.112+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:02:17.111+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:02:17.136+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:02:17.136+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:02:17.162+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.119 seconds
+[2024-11-25T12:02:47.563+0000] {processor.py:186} INFO - Started process (PID=1903) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:02:47.574+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:02:47.576+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:02:47.575+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:02:47.608+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:02:47.626+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:02:47.626+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:02:47.654+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:02:47.654+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:02:47.691+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.135 seconds
+[2024-11-25T12:03:18.120+0000] {processor.py:186} INFO - Started process (PID=1907) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:03:18.131+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:03:18.132+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:03:18.132+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:03:18.165+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:03:18.185+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:03:18.184+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:03:18.212+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:03:18.212+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:03:18.238+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.124 seconds
+[2024-11-25T12:03:48.677+0000] {processor.py:186} INFO - Started process (PID=1911) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:03:48.678+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:03:48.679+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:03:48.679+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:03:48.713+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:03:48.731+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:03:48.730+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:03:48.756+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:03:48.755+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:03:48.782+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.114 seconds
+[2024-11-25T12:04:19.114+0000] {processor.py:186} INFO - Started process (PID=1915) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:04:19.125+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:04:19.127+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:04:19.126+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:04:19.159+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:04:19.177+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:04:19.176+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:04:19.199+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:04:19.199+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:04:19.225+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.120 seconds
+[2024-11-25T12:04:49.735+0000] {processor.py:186} INFO - Started process (PID=1919) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:04:49.737+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:04:49.739+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:04:49.738+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:04:49.771+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:04:49.788+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:04:49.788+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:04:49.815+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:04:49.815+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:04:49.840+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.110 seconds
+[2024-11-25T12:05:20.293+0000] {processor.py:186} INFO - Started process (PID=1923) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:05:20.295+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:05:20.297+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:05:20.297+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:05:20.329+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:05:20.346+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:05:20.346+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:05:20.370+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:05:20.369+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:05:20.397+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.111 seconds
+[2024-11-25T12:05:50.973+0000] {processor.py:186} INFO - Started process (PID=1927) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:05:50.982+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:05:50.984+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:05:50.983+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:05:51.016+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:05:51.035+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:05:51.035+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:05:51.060+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:05:51.060+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:05:51.087+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.121 seconds
+[2024-11-25T12:06:21.525+0000] {processor.py:186} INFO - Started process (PID=1931) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:06:21.527+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:06:21.527+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:06:21.527+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:06:21.563+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:06:21.585+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:06:21.584+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:06:21.609+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:06:21.609+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:06:21.639+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.121 seconds
+[2024-11-25T12:06:52.080+0000] {processor.py:186} INFO - Started process (PID=1935) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:06:52.082+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:06:52.084+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:06:52.084+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:06:52.117+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:06:52.138+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:06:52.138+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:06:52.169+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:06:52.168+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:06:52.195+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.123 seconds
+[2024-11-25T12:07:22.626+0000] {processor.py:186} INFO - Started process (PID=1939) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:07:22.636+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:07:22.637+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:07:22.636+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:07:22.669+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:07:22.687+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:07:22.686+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:07:22.710+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:07:22.710+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:07:22.744+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.125 seconds
+[2024-11-25T12:07:53.226+0000] {processor.py:186} INFO - Started process (PID=1943) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:07:53.236+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:07:53.238+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:07:53.237+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:07:53.274+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:07:53.300+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:07:53.300+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:07:53.327+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:07:53.327+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:07:53.355+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.136 seconds
+[2024-11-25T12:08:23.909+0000] {processor.py:186} INFO - Started process (PID=1947) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:08:23.920+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:08:23.921+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:08:23.921+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:08:23.949+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:08:23.967+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:08:23.967+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:08:23.995+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:08:23.994+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:08:24.027+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.124 seconds
+[2024-11-25T12:08:54.464+0000] {processor.py:186} INFO - Started process (PID=1951) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:08:54.466+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:08:54.468+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:08:54.468+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:08:54.498+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:08:54.519+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:08:54.518+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:08:54.546+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:08:54.545+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:08:54.571+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.115 seconds
+[2024-11-25T12:09:25.057+0000] {processor.py:186} INFO - Started process (PID=1955) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:09:25.058+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:09:25.060+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:09:25.059+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:09:25.101+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:09:25.124+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:09:25.123+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:09:25.154+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:09:25.154+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:09:25.180+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.130 seconds
+[2024-11-25T12:09:55.521+0000] {processor.py:186} INFO - Started process (PID=1959) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:09:55.533+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:09:55.534+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:09:55.534+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:09:55.565+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:09:55.584+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:09:55.583+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:09:55.609+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:09:55.608+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:09:55.636+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.123 seconds
+[2024-11-25T12:10:26.039+0000] {processor.py:186} INFO - Started process (PID=1963) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:10:26.040+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:10:26.042+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:10:26.042+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:10:26.075+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:10:26.093+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:10:26.092+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:10:26.119+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:10:26.119+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:10:26.147+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.117 seconds
+[2024-11-25T12:10:56.598+0000] {processor.py:186} INFO - Started process (PID=1967) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:10:56.608+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:10:56.611+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:10:56.610+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:10:56.642+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:10:56.662+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:10:56.661+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:10:56.688+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:10:56.687+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:10:56.728+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.136 seconds
+[2024-11-25T12:11:27.169+0000] {processor.py:186} INFO - Started process (PID=1971) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:11:27.179+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:11:27.181+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:11:27.180+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:11:27.212+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:11:27.228+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:11:27.228+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:11:27.257+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:11:27.257+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:11:27.282+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.120 seconds
+[2024-11-25T12:11:57.635+0000] {processor.py:186} INFO - Started process (PID=1975) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:11:57.646+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:11:57.648+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:11:57.648+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:11:57.688+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:11:57.707+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:11:57.707+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:11:57.732+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:11:57.732+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:11:57.778+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.150 seconds
+[2024-11-25T12:12:28.388+0000] {processor.py:186} INFO - Started process (PID=1979) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:12:28.389+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:12:28.390+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:12:28.390+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:12:28.768+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:12:28.853+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:12:28.853+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:12:28.875+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:12:28.875+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:12:28.893+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.525 seconds
+[2024-11-25T12:12:59.557+0000] {processor.py:186} INFO - Started process (PID=1984) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:12:59.559+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:12:59.560+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:12:59.559+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:12:59.592+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:12:59.609+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:12:59.609+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:12:59.634+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:12:59.633+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:12:59.659+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.109 seconds
+[2024-11-25T12:13:29.997+0000] {processor.py:186} INFO - Started process (PID=1988) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:13:29.998+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:13:30.000+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:13:29.999+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:13:30.033+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:13:30.052+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:13:30.052+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:13:30.079+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:13:30.079+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:13:30.104+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.114 seconds
+[2024-11-25T12:14:00.606+0000] {processor.py:186} INFO - Started process (PID=1992) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:14:00.608+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:14:00.609+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:14:00.609+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:14:00.642+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:14:00.659+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:14:00.659+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:14:00.683+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:14:00.683+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:14:00.706+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.107 seconds
+[2024-11-25T12:14:31.196+0000] {processor.py:186} INFO - Started process (PID=1996) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:14:31.198+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:14:31.199+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:14:31.199+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:14:31.233+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:14:31.252+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:14:31.252+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:14:31.280+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:14:31.279+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:14:31.308+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.121 seconds
+[2024-11-25T12:15:01.659+0000] {processor.py:186} INFO - Started process (PID=2000) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:15:01.660+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:15:01.662+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:15:01.661+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:15:01.695+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:15:01.714+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:15:01.713+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:15:01.744+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:15:01.744+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:15:01.768+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.116 seconds
+[2024-11-25T12:15:32.209+0000] {processor.py:186} INFO - Started process (PID=2004) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:15:32.210+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:15:32.212+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:15:32.211+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:15:32.247+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:15:32.268+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:15:32.268+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:15:32.298+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:15:32.297+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:15:32.329+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.129 seconds
+[2024-11-25T12:16:02.784+0000] {processor.py:186} INFO - Started process (PID=2008) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:16:02.787+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:16:02.788+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:16:02.788+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:16:02.826+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:16:02.844+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:16:02.843+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:16:02.868+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:16:02.868+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:16:02.898+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.122 seconds
+[2024-11-25T12:16:33.227+0000] {processor.py:186} INFO - Started process (PID=2012) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:16:33.231+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:16:33.233+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:16:33.233+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:16:33.265+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:16:33.282+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:16:33.282+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:16:33.307+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:16:33.307+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:16:33.331+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.110 seconds
+[2024-11-25T12:17:03.800+0000] {processor.py:186} INFO - Started process (PID=2016) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:17:03.802+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:17:03.803+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:17:03.803+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:17:03.838+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:17:03.862+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:17:03.862+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:17:03.891+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:17:03.890+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:17:03.930+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.137 seconds
+[2024-11-25T12:17:34.483+0000] {processor.py:186} INFO - Started process (PID=2020) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:17:34.484+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:17:34.486+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:17:34.485+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:17:34.521+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:17:34.542+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:17:34.542+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:17:34.572+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:17:34.571+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:17:34.607+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.133 seconds
+[2024-11-25T12:18:05.141+0000] {processor.py:186} INFO - Started process (PID=2024) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:18:05.144+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:18:05.146+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:18:05.146+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:18:05.184+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:18:05.209+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:18:05.209+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:18:05.238+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:18:05.237+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:18:05.263+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.129 seconds
+[2024-11-25T12:18:35.574+0000] {processor.py:186} INFO - Started process (PID=2028) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:18:35.575+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:18:35.577+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:18:35.577+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:18:35.617+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:18:35.640+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:18:35.639+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:18:35.670+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:18:35.670+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:18:35.697+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.131 seconds
+[2024-11-25T12:19:06.147+0000] {processor.py:186} INFO - Started process (PID=2032) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:19:06.149+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:19:06.151+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:19:06.151+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:19:06.186+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:19:06.206+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:19:06.206+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:19:06.236+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:19:06.236+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:19:06.266+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.128 seconds
+[2024-11-25T12:19:36.592+0000] {processor.py:186} INFO - Started process (PID=2036) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:19:36.596+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:19:36.597+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:19:36.597+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:19:36.637+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:19:36.657+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:19:36.657+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:19:36.690+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:19:36.689+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:19:36.730+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.145 seconds
+[2024-11-25T12:20:07.196+0000] {processor.py:186} INFO - Started process (PID=2040) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:20:07.199+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:20:07.200+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:20:07.200+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:20:07.232+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:20:07.249+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:20:07.249+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:20:07.274+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:20:07.274+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:20:07.313+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.124 seconds
+[2024-11-25T12:20:37.735+0000] {processor.py:186} INFO - Started process (PID=2044) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:20:37.738+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:20:37.740+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:20:37.739+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:20:37.773+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:20:37.791+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:20:37.791+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:20:37.816+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:20:37.816+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:20:37.842+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.114 seconds
+[2024-11-25T12:21:08.170+0000] {processor.py:186} INFO - Started process (PID=2048) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:21:08.172+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:21:08.174+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:21:08.174+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:21:08.207+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:21:08.227+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:21:08.227+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:21:08.255+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:21:08.255+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:21:08.283+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.120 seconds
+[2024-11-25T12:21:38.746+0000] {processor.py:186} INFO - Started process (PID=2052) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:21:38.748+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:21:38.752+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:21:38.751+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:21:38.787+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:21:38.805+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:21:38.805+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:21:38.831+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:21:38.830+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:21:38.855+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.118 seconds
+[2024-11-25T12:22:09.274+0000] {processor.py:186} INFO - Started process (PID=2056) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:22:09.276+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:22:09.277+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:22:09.277+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:22:09.316+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:22:09.337+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:22:09.337+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:22:09.366+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:22:09.366+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:22:09.405+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.139 seconds
+[2024-11-25T12:22:39.748+0000] {processor.py:186} INFO - Started process (PID=2060) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:22:39.751+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:22:39.752+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:22:39.752+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:22:39.791+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:22:39.818+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:22:39.818+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:22:39.852+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:22:39.851+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:22:39.885+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.145 seconds
+[2024-11-25T12:23:10.340+0000] {processor.py:186} INFO - Started process (PID=2064) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:23:10.341+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:23:10.343+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:23:10.343+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:23:10.379+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:23:10.399+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:23:10.399+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:23:10.427+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:23:10.426+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:23:10.452+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.121 seconds
+[2024-11-25T12:23:40.887+0000] {processor.py:186} INFO - Started process (PID=2068) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:23:40.888+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:23:40.890+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:23:40.890+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:23:40.924+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:23:40.959+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:23:40.959+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:23:40.988+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:23:40.987+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:23:41.017+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.138 seconds
+[2024-11-25T12:24:11.404+0000] {processor.py:186} INFO - Started process (PID=2072) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:24:11.405+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:24:11.406+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:24:11.406+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:24:11.439+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:24:11.457+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:24:11.456+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:24:11.489+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:24:11.489+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:24:11.528+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.132 seconds
+[2024-11-25T12:24:41.990+0000] {processor.py:186} INFO - Started process (PID=2076) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:24:41.991+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:24:41.993+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:24:41.992+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:24:42.024+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:24:42.041+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:24:42.041+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:24:42.066+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:24:42.065+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:24:42.092+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.109 seconds
+[2024-11-25T12:25:12.524+0000] {processor.py:186} INFO - Started process (PID=2080) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:25:12.526+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:25:12.527+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:25:12.527+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:25:12.561+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:25:12.580+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:25:12.579+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:25:12.604+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:25:12.604+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:25:12.632+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.115 seconds
+[2024-11-25T12:25:42.998+0000] {processor.py:186} INFO - Started process (PID=2084) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:25:43.000+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:25:43.002+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:25:43.001+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:25:43.034+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:25:43.052+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:25:43.052+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:25:43.077+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:25:43.077+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:25:43.105+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.115 seconds
+[2024-11-25T12:26:13.578+0000] {processor.py:186} INFO - Started process (PID=2088) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:26:13.580+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:26:13.581+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:26:13.581+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:26:13.614+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:26:13.632+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:26:13.632+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:26:13.656+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:26:13.656+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:26:13.680+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.108 seconds
+[2024-11-25T12:26:44.142+0000] {processor.py:186} INFO - Started process (PID=2092) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:26:44.144+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:26:44.145+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:26:44.144+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:26:44.179+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:26:44.195+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:26:44.195+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:26:44.221+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:26:44.220+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:26:44.262+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.128 seconds
+[2024-11-25T12:27:14.593+0000] {processor.py:186} INFO - Started process (PID=2096) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:27:14.596+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:27:14.597+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:27:14.596+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:27:14.633+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:27:14.653+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:27:14.653+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:27:14.679+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:27:14.679+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:27:14.709+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.123 seconds
+[2024-11-25T12:27:45.173+0000] {processor.py:186} INFO - Started process (PID=2100) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:27:45.174+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:27:45.176+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:27:45.176+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:27:45.206+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:27:45.224+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:27:45.223+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:27:45.247+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:27:45.247+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:27:45.272+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.107 seconds
+[2024-11-25T12:28:15.715+0000] {processor.py:186} INFO - Started process (PID=2104) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:28:15.718+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:28:15.719+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:28:15.719+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:28:15.752+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:28:15.769+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:28:15.769+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:28:15.795+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:28:15.795+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:28:15.827+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.119 seconds
+[2024-11-25T12:28:46.148+0000] {processor.py:186} INFO - Started process (PID=2108) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:28:46.161+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:28:46.163+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:28:46.162+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:28:46.196+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:28:46.216+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:28:46.216+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:28:46.244+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:28:46.243+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:28:46.269+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.129 seconds
+[2024-11-25T12:29:16.683+0000] {processor.py:186} INFO - Started process (PID=2112) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:29:16.684+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:29:16.686+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:29:16.686+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:29:16.733+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:29:16.760+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:29:16.760+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:29:16.805+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:29:16.804+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:29:16.844+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.170 seconds
+[2024-11-25T12:29:47.345+0000] {processor.py:186} INFO - Started process (PID=2116) to work on /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:29:47.347+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mongo_test.py for tasks to queue
+[2024-11-25T12:29:47.350+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:29:47.349+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:29:47.410+0000] {processor.py:925} INFO - DAG(s) 'interpark_to_mongodb' retrieved from /opt/airflow/dags/mongo_test.py
+[2024-11-25T12:29:47.438+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:29:47.438+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-25T12:29:47.476+0000] {logging_mixin.py:190} INFO - [2024-11-25T12:29:47.475+0000] {dag.py:4180} INFO - Setting next_dagrun for interpark_to_mongodb to 2024-11-25 00:00:00+00:00, run_after=2024-11-26 00:00:00+00:00
+[2024-11-25T12:29:47.509+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mongo_test.py took 0.179 seconds

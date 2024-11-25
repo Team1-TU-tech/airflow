@@ -8101,3 +8101,68 @@
 [2024-11-25T09:58:14.463+0000] {process_utils.py:194} INFO - open_page_url 접속 에러
 [2024-11-25T09:58:14.463+0000] {process_utils.py:194} INFO - 티켓오픈일이 없어 53628로 넘어갑니다
 [2024-11-25T09:58:14.463+0000] {process_utils.py:194} INFO - open_page_url 접속 에러
+[2024-11-25T11:48:57.941+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to restarting. Terminating instance.
+[2024-11-25T11:48:57.954+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2024-11-25T11:48:57.962+0000] {process_utils.py:132} INFO - Sending 15 to group 4007. PIDs of all processes in the group: [4083, 4116, 4243, 4249, 4254, 4256, 4279, 4280, 4337, 4346, 4363, 41802, 4278, 4122, 4126, 4127, 4153, 4154, 4181, 4194, 4152, 4007]
+[2024-11-25T11:48:57.968+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 4007
+[2024-11-25T11:48:57.974+0000] {taskinstance.py:3093} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-11-25T11:48:58.034+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=4280, status='terminated', started='08:33:12') (4280) terminated with exit code None
+[2024-11-25T11:48:58.112+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=4346, status='terminated', started='08:33:12') (4346) terminated with exit code None
+[2024-11-25T11:48:58.114+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=4154, status='terminated', started='08:33:11') (4154) terminated with exit code None
+[2024-11-25T11:48:58.170+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=4122, status='terminated', started='08:33:11') (4122) terminated with exit code None
+[2024-11-25T11:48:58.172+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=4181, status='terminated', started='08:33:11') (4181) terminated with exit code None
+[2024-11-25T11:48:58.173+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=41802, status='terminated', started='09:50:31') (41802) terminated with exit code None
+[2024-11-25T11:48:58.226+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=4127, status='terminated', started='08:33:11') (4127) terminated with exit code None
+[2024-11-25T11:48:58.228+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=4243, status='terminated', started='08:33:12') (4243) terminated with exit code None
+[2024-11-25T11:48:58.229+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=4278, status='terminated', started='08:33:12') (4278) terminated with exit code None
+[2024-11-25T11:48:58.230+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=4116, status='terminated', started='08:33:11') (4116) terminated with exit code None
+[2024-11-25T11:48:58.231+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=4194, status='terminated', started='08:33:11') (4194) terminated with exit code None
+[2024-11-25T11:48:58.233+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=4152, status='terminated', started='08:33:11') (4152) terminated with exit code None
+[2024-11-25T11:48:58.234+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=4083, status='terminated', started='08:33:06') (4083) terminated with exit code None
+[2024-11-25T11:48:58.235+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=4279, status='terminated', started='08:33:12') (4279) terminated with exit code None
+[2024-11-25T11:48:58.236+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=4249, status='terminated', started='08:33:12') (4249) terminated with exit code None
+[2024-11-25T11:48:58.264+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=4337, status='terminated', started='08:33:12') (4337) terminated with exit code None
+[2024-11-25T11:48:58.265+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=4363, status='terminated', started='08:33:14') (4363) terminated with exit code None
+[2024-11-25T11:48:58.267+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=4254, status='terminated', started='08:33:12') (4254) terminated with exit code None
+[2024-11-25T11:48:58.268+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=4126, status='terminated', started='08:33:11') (4126) terminated with exit code None
+[2024-11-25T11:48:58.269+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=4153, status='terminated', started='08:33:11') (4153) terminated with exit code None
+[2024-11-25T11:48:58.270+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=4256, status='terminated', started='08:33:12') (4256) terminated with exit code None
+[2024-11-25T11:48:58.571+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 505, in execute
+    return super().execute(context=serializable_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 870, in execute_callable
+    result = self._execute_python_callable_in_subprocess(python_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 570, in _execute_python_callable_in_subprocess
+    execute_in_subprocess(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/process_utils.py", line 175, in execute_in_subprocess
+    execute_in_subprocess_with_kwargs(cmd, cwd=cwd, env=env)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/process_utils.py", line 193, in execute_in_subprocess_with_kwargs
+    for line in iter(proc.stdout.readline, b""):
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3095, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2024-11-25T11:48:58.589+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=open_interpark_to_S3, task_id=upload_to_s3, run_id=scheduled__2024-11-24T00:00:00+00:00, execution_date=20241124T000000, start_date=20241125T083247, end_date=20241125T114858
+[2024-11-25T11:48:58.619+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-25T11:48:58.645+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=4007, status='terminated', exitcode=2, started='08:32:47') (4007) terminated with exit code 2
