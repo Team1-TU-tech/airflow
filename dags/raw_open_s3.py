@@ -52,7 +52,8 @@ default_args={
 'retry_delay':timedelta(minutes=1),
 },
 description='interpark DAG',
-start_date=datetime(2024, 11, 21),
+schedule_interval='@daily',
+start_date=datetime(2024, 11, 25),
 catchup=False,
 tags=['interpark','s3']
 ) as dag:
@@ -61,7 +62,7 @@ tags=['interpark','s3']
             task_id='upload_to_s3',
             python_callable=upload_to_s3,
             requirements=[
-                "git+https://github.com/hahahellooo/interpark.git@0.3/new_crawling"
+                "git+https://github.com/hahahellooo/interpark.git@0.4/s3"
                 ],
             system_site_packages=True,
             )
