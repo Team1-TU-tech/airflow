@@ -6,5 +6,5 @@ COPY install.sh /
 RUN bash /install.sh
 
 USER airflow
-RUN pip install boto3
+RUN pip install boto3 && pip install git+https://github.com/dpkp/kafka-python.git
 
