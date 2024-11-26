@@ -126,34 +126,140 @@ services:
     networks:
       - airflow_network
 
-  # Kafka Broker
-  kafka:
-    image: confluentinc/cp-kafka:7.5.0
-    container_name: kafka
-    ports:
-      - "9092:9092"
-    depends_on:
-      - zookeeper
-    environment:
-      KAFKA_BROKER_ID: 1
-      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
-      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
-    restart: always
-    networks:
-      - airflow_network
-
-  # Zookeeper for Kafka
-  zookeeper:
+  # Zookeeper 1
+  zookeeper1:
     image: confluentinc/cp-zookeeper:7.5.0
-    container_name: zookeeper
+    container_name: zookeeper1
     ports:
       - "2181:2181"
     environment:
+      ZOOKEEPER_SERVER_ID: 1
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
-    restart: always
+      ZOOKEEPER_INIT_LIMIT: 5
+      ZOOKEEPER_SYNC_LIMIT: 2
+      ZOOKEEPER_SERVERS: zookeeper1:2888:3888,zookeeper2:2888:3888,zookeeper3:2888:3888
+    networks:
+      - airflow_network
+
+  # Zookeeper 2
+  zookeeper2:
+    image: confluentinc/cp-zookeeper:7.5.0
+    container_name: zookeeper2
+    ports:
+      - "2182:2181"
+    environment:
+      ZOOKEEPER_SERVER_ID: 2
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+      ZOOKEEPER_INIT_LIMIT: 5
+      ZOOKEEPER_SYNC_LIMIT: 2
+      ZOOKEEPER_SERVERS: zookeeper1:2888:3888,zookeeper2:2888:3888,zookeeper3:2888:3888
+    networks:
+      - airflow_network
+
+  # Zookeeper 3
+  zookeeper3:
+    image: confluentinc/cp-zookeeper:7.5.0
+    container_name: zookeeper3
+    ports:
+      - "2183:2181"
+    environment:
+      ZOOKEEPER_SERVER_ID: 3
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+      ZOOKEEPER_INIT_LIMIT: 5
+      ZOOKEEPER_SYNC_LIMIT: 2
+      ZOOKEEPER_SERVERS: zookeeper1:2888:3888,zookeeper2:2888:3888,zookeeper3:2888:3888
+    networks:
+      - airflow_network
+
+  # Kafka Broker 1
+  kafka1:
+    image: confluentinc/cp-kafka:7.5.0
+    container_name: kafka1
+    ports:
+      - "9092:9092"
+    depends_on:
+      - zookeeper1
+      - zookeeper2
+      - zookeeper3
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper1:2181,zookeeper2:2181,zookeeper3:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka1:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 2
+      KAFKA_MIN_INSYNC_REPLICAS: 2 # 설정 추가
+    networks:
+      - airflow_network
+
+  # Kafka Broker 2
+  kafka2:
+    image: confluentinc/cp-kafka:7.5.0
+    container_name: kafka2
+    ports:
+      - "9093:9093"
+    depends_on:
+      - zookeeper1
+      - zookeeper2
+      - zookeeper3
+    environment:
+      KAFKA_BROKER_ID: 2
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper1:2181,zookeeper2:2181,zookeeper3:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka2:9093
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 2
+      KAFKA_MIN_INSYNC_REPLICAS: 2 # 설정 추가
+    networks:
+      - airflow_network
+
+  # Kafka Broker 3
+  kafka3:
+    image: confluentinc/cp-kafka:7.5.0
+    container_name: kafka3
+    ports:
+      - "9094:9094"
+    depends_on:
+      - zookeeper1
+      - zookeeper2
+      - zookeeper3
+    environment:
+      KAFKA_BROKER_ID: 3
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper1:2181,zookeeper2:2181,zookeeper3:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka3:9094
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 2
+      KAFKA_MIN_INSYNC_REPLICAS: 2 # 설정 추가
+    networks:
+      - airflow_network
+
+  # Kafka UI
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest
+    container_name: kafka-ui
+    depends_on:
+      - kafka1
+      - kafka2
+      - kafka3
+    ports:
+      - "8081:8080"
+    environment:
+      KAFKA_CLUSTERS_0_NAME: local
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka1:9092,kafka2:9093,kafka3:9094
+      KAFKA_CLUSTERS_0_ZOOKEEPER: zookeeper1:2181
+    networks:
+      - airflow_network
+
+  # Kafka Consumer
+  kafka-consumer:
+    build: kafka/
+    container_name: kafka-consumer
+    depends_on:
+      - kafka1
+    environment:
+      S3_BUCKET_NAME: t1-tu-data
+    command: python /app/consumer.py
     networks:
       - airflow_network
 
