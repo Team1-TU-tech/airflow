@@ -34,7 +34,7 @@ def sending_to_s3():
     print("크롤링 데이터 수집 완료")
     
     from kafka import KafkaProducer
-    import json
+    import json, io
     # Kafka 전송
     producer = KafkaProducer(
         bootstrap_servers=['kafka1:9092', 'kafka2:9093', 'kafka3:9094'],
@@ -106,7 +106,8 @@ def upload_to_s3():
 
     while True:
         # Kafka Consumer에서 메시지를 폴링
-        messages = consumer.poll(timeout_ms=timeout_seconds * 1000)  # 타임아웃을 밀리초 단위로 설정
+        messages = consumer.poll(timeout_ms=timeout_seconds * 5000)  # 타임아웃을 밀리초 단위로 설정
+        
         if messages:
             for message in consumer:
                 data = message.value  
