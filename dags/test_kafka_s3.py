@@ -66,9 +66,10 @@ def kafka_to_s3():
     import json
     retry_count = 3
     attempt = 0
+    connected = False
 
     # kafka 연결
-    while attempt < retry_count:
+    while attempt < retry_count and not connected:
         try:
             consumer = KafkaConsumer(
                 'raw_interpark_data',
@@ -76,67 +77,68 @@ def kafka_to_s3():
                 auto_offset_reset="earliest",
                 group_id='interpark_s3',
                 value_deserializer=lambda x: json.loads(x.decode('utf-8')),
-                consumer_timeout_ms=1000,
+                consumer_timeout_ms=3000,
             )
+            
+            print("kafka 연결 성공")
+            connected = True
+    
+            # 컨슈머 연결되면 s3로 전송
+            empty_count = 0  # 메시지가 없을 때 카운트할 변수
 
-            if consumer:
-                print("kafka 연결 성공")
-                break
-            else:
-                attempt += 1
-                print(f"kafka 연결 실패: {retry_count}번째 연결 시도 중....")
-                time.sleep(5)
-                continue
+            while True:
+                msg = consumer.poll(timeout_ms=1000)
+                # 메시지가 없으면 기다림
+                if msg is None:
+                    empty_count += 1
+                    print(f"{empty_count}: 메세지가 없습니다.")
+                    # 5번 연속으로 메시지가 없으면 종료
+                    if empty_count >= 3:
+                        print("메시지가 3번 연속으로 없어 종료합니다.")
+                        break
+                    continue
 
+                else:
+                    empty_count = 0  # 메시지가 있으면 카운트 초기화
+
+                    for message in msg.values():
+                        for data in message:
+                            try:
+                                # Kafka에서 메시지를 가져오기
+                                data = data.value
+                                print(f"Kafka에서 받은 데이터: {data}")
+
+                                # Base64로 인코딩된 'contents'를 디코딩하여 원래 바이트 데이터를 복원
+                                decoded_content = base64.b64decode(data['contents'])
+
+                                # 바이트 데이터를 BytesIO 객체로 복원
+                                file_obj = io.BytesIO(decoded_content)
+
+                                # S3로 업로드
+                                key = data['save_path']
+                                bucket_name = 't1-tu-data'
+
+                                hook = S3Hook(aws_conn_id='interpark')  # s3 연결
+                                hook.get_conn().put_object(
+                                Bucket=bucket_name,
+                                Key=key,
+                                Body=file_obj
+                                )          
+                                print(f"S3에 업로드 완료: {bucket_name}/{key}")
+                            
+                            except Exception as e:
+                                print(f"S3 업로드 실패: {e}")
+                                continue
+
+                    break
+            consumer.close()
+            print("task 완료: consumer와의 연결을 종료합니다.") 
+        
         except Exception as e:
             print(f"kafka 연결 실패: {e}")
-
-    # 컨슈머 연결되면 s3로 전송
-    empty_count = 0  # 메시지가 없을 때 카운트할 변수
-
-    while True:
-        msg = consumer.poll(timeout_ms=1000)
-
-        # 메시지가 없으면 기다림
-        if msg is None:
-            empty_count += 1
-            print(f"{empty_count}: 메세지가 없습니다.")
-            # 5번 연속으로 메시지가 없으면 종료
-            if empty_count >= 5:
-                print("메시지가 5번 연속으로 없어 종료합니다.")
-                break
-            continue
-        else:
-            empty_count = 0  # 메시지가 있으면 카운트 초기화
-
-        for message in msg.values():
-            for data in message:
-                try:
-                    # Kafka에서 메시지를 가져오기
-                    data = data.value
-                    print(f"Kafka에서 받은 데이터: {data}")
-
-                    # Base64로 인코딩된 'contents'를 디코딩하여 원래 바이트 데이터를 복원
-                    decoded_content = base64.b64decode(data['contents'])
-
-                    # 바이트 데이터를 BytesIO 객체로 복원
-                    file_obj = io.BytesIO(decoded_content)
-
-                    # S3로 업로드
-                    key = data['save_path']
-                    bucket_name = 't1-tu-data'
-
-                    hook = S3Hook(aws_conn_id='interpark')  # s3 연결
-                    hook.get_conn().put_object(
-                        Bucket=bucket_name,
-                        Key=key,
-                        Body=file_obj
-                    )
-                    print(f"S3에 업로드 완료: {bucket_name}/{key}")
-                    break
-                except Exception as e:
-                    print(f"S3 업로드 실패: {e}")
-                    continue
+            attempt += 1
+            print(f"{attempt}/{retry_count} 번째 시도 중...")
+            time.sleep(5)  # 5초 대기 후 재시도
 
 
 def success_noti():
@@ -144,14 +146,20 @@ def success_noti():
     data = {"message":"airflow 작업 완료👍"}
     headers={"Authorization": 'Bearer UuAPZM7msPnFaJt5wXTUx34JqYKO7n3AUlLq4b3eyZ4'}
     response = requests.post(url, data, headers=headers)
-    return response
+    print("#"*35)
+    print("airflow 작업완료")
+    print("#"*35)
+    return True
 
 def fail_noti():
     url = "https://notify-api.line.me/api/notify"
     data = {"message":"airflow 작업 🔥실패🔥"}
     headers={"Authorization": 'Bearer UuAPZM7msPnFaJt5wXTUx34JqYKO7n3AUlLq4b3eyZ4'}
     response = requests.post(url, data, headers=headers)
-    return response
+    print("#"*35)
+    print("airflow 작업실패")
+    print("#"*35)
+    return True
 
 with DAG(
 'kafka_to_S3',
@@ -175,7 +183,8 @@ tags=['interpark','kafka','s3']
             )
 
     end = EmptyOperator(
-            task_id='end'
+            task_id='end',
+            trigger_rule ="one_success"
             )
 
     producer_to_kafka = PythonVirtualenvOperator(
@@ -184,7 +193,7 @@ tags=['interpark','kafka','s3']
             requirements=[
                 "git+https://github.com/hahahellooo/interpark.git@0.4/s3"
                 ],
-            system_site_packages=True,
+            system_site_packages=True
             )
     
     kafka_to_s3 = PythonOperator(
@@ -194,14 +203,13 @@ tags=['interpark','kafka','s3']
     
     success_noti = PythonOperator(
             task_id='success.noti',
-            python_callable=success_noti,
-            trigger_rule=TriggerRule.ALL_SUCCESS
+            python_callable=success_noti
             )
 
     fail_noti = PythonOperator(
             task_id='fail.noti',
             python_callable=fail_noti,
-            trigger_rule=TriggerRule.ONE_FAILED
+            trigger_rule="one_failed"
             )
 
     start >> producer_to_kafka >> kafka_to_s3
