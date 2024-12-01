@@ -28,6 +28,7 @@ def s3_to_kafka():
                 "title": data.get("title"),
                 "category": data.get("category"),
                 "location": data.get("location"),
+                "region": data.get("region"),
                 "price": data.get("price"),
                 "start_date": data.get("start_date"),
                 "end_date": data.get("end_date"),
