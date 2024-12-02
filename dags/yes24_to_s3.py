@@ -16,13 +16,13 @@ def sending_to_s3():
     from crawling.links import get_link
     
     # 링크 가져오기
-    last_id = get_last_id_from_redis()
+    last_id = get_last_id_from_redis('yes24')
     links = get_link(start_id=last_id)
     if links:
         #URL에서 마지막 ID 추출
         last_url = links[-1]  # 마지막 URL
         last_processed_id = int(last_url.split('/')[-1])
-        update_last_id_in_redis(last_processed_id) #Redis에 저장
+        update_last_id_in_redis('yes24', last_processed_id) #Redis에 저장
         print(f"마지막 ID: {last_processed_id}")
     else:
         print("링크 리스트가 비어 있습니다.")
@@ -164,7 +164,7 @@ tags=['yes24'],
             task_id='sending_to_s3',
             python_callable=sending_to_s3,
             requirements=[
-                "git+https://github.com/Team1-TU-tech/crawling.git@0.3.5/dev/yes24",
+                "git+https://github.com/Team1-TU-tech/crawling.git@0.3.6/dev/yes24",
                 "git+https://github.com/dpkp/kafka-python.git",
                 "redis"
                 ],

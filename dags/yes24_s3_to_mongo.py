@@ -9,11 +9,8 @@ os.environ['LC_ALL'] = 'C'
 
 
 def mongodb():
-    #from airflow.providers.amazon.aws.hooks.s3 import S3Hook
     from ocr.img_to_text import s3_to_mongodb
 
-    #hook = S3Hook(aws_conn_id='yes24') 
-    
     print('*' * 30)
     print(f"Sending to Mongodb")
     print('*' * 30)
