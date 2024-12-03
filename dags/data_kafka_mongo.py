@@ -10,7 +10,8 @@ import requests
 import json
 
 def s3_to_kafka():
-    from interpark.read_s3_parsing import html_parsing, extract_data 
+    from interpark.read_s3_parsing import html_parsing, extract_data, convert_to_datetime_format
+    from interpark.region import get_location
     data = html_parsing()
     print("데이터 불러오기 완료")
 
