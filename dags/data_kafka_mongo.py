@@ -11,49 +11,9 @@ import json
 
 def s3_to_kafka():
     from interpark.read_s3_parsing import html_parsing, extract_data, convert_to_datetime_format
-    from interpark.region import get_location
-    data = html_parsing()
+    message = html_parsing()
     print("데이터 불러오기 완료")
 
-    from kafka import KafkaProducer
-    import json
-    producer = KafkaProducer(
-            bootstrap_servers = ['kafka1:9093','kafka2:9094', 'kafka3:9095'],
-            value_serializer=lambda x: json.dumps(x).encode('utf-8')
-            )
-    topic = 'interpark_data'
-    print("==========================================")
-    try:
-        # ticket_data 형식에 맞게 메시지 작성
-        message = {
-                "title": data.get("title"),
-                "category": data.get("category"),
-                "location": data.get("location"),
-                "region": data.get("region"),
-                "price": data.get("price"),
-                "start_date": data.get("start_date"),
-                "end_date": data.get("end_date"),
-                "show_time": data.get("show_time"),
-                "running_time": data.get("running_time"),
-                "casting": data.get("casting"),
-                "rating": data.get("rating"),
-                "description": data.get("description"),
-                "poster_url": data.get("poster_url"),
-                "open_date": data.get("open_date"),
-                "pre_open_date": data.get("pre_open_date"),
-                "artist": data.get("artist"),
-                "hosts": data.get("hosts")
-                }
-            
-        producer.send(topic, message)
-        print("카프카로 전송 완료")
-    except ValueError as ve:
-        print(f"데이터가 없습니다. 오류: {ve}")
-    except Exception as e:
-        print(f"예상치 못한 오류 발생: {e}")
-
-    # 모든 데이터 전송 후 flush
-    producer.flush()
 
 def consumer_to_mongo():
     attempt = 0
@@ -61,7 +21,7 @@ def consumer_to_mongo():
     retry_count = 3
 
     try:
-        client = MongoClient("mongodb+srv://hahahello777:akXSTBrO5Q5OkWb3@cluster0.5vlv3.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0")  # MongoDB 연결
+        client = MongoClient("mongodb+srv://hahahello777:VIiYTK9NobgeM1hk@cluster0.5vlv3.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0")  # MongoDB 연결
         db = client['test']  # 데이터베이스 이름
         collection = db['test']  # 컬렉션 이름
         print("MongoDB 연결 성공")
@@ -78,7 +38,7 @@ def consumer_to_mongo():
                 auto_offset_reset="earliest",
                 group_id='interpark_mongo',
                 value_deserializer=lambda x: json.loads(x.decode('utf-8')),
-                consumer_timeout_ms=3000,
+                consumer_timeout_ms=5000,
             )
 
             print("kafka 연결 성공")
@@ -87,7 +47,7 @@ def consumer_to_mongo():
             # 컨슈머 연결되면 s3로 전송
             empty_count = 0  # 메시지가 없을 때 카운트할 변수
             while True:
-                msg = consumer.poll(timeout_ms=1000)
+                msg = consumer.poll(timeout_ms=3000)
                 # 메시지가 없으면 기다림
                 if not msg:
                     empty_count += 1

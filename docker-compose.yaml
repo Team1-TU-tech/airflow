@@ -13,6 +13,8 @@ x-airflow-common:
     AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
     AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth,airflow.api.auth.backend.session'
     AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK: 'false'
+    AIRFLOW__CORE__DAGBAG_IMPORT_TIMEOUT: 120  # dagbag-import-timeout 설정
+    AIRFLOW__CORE__DAG_FILE_PROCESSOR_TIMEOUT: 180  # dag-file-processor-timeout 설정
   volumes:
     - ${AIRFLOW_PROJ_DIR:-.}/dags:/opt/airflow/dags
     - ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs
@@ -76,6 +78,7 @@ services:
       - airflow-init
     networks:
       - kafka-network
+    ###########################추가
 
   airflow-worker:
     <<: *airflow-common
@@ -100,8 +103,11 @@ services:
     deploy:
       resources:
         limits:
-          memory: 6g
-          cpus: "4.0"
+          memory: 8g   # 메모리 한도를 8GB로 증가
+          cpus: "4.0"   # CPU 한도를 4개로 증가
+        reservations:
+          memory: 4g    # 최소 예약 메모리 4GB
+          cpus: "2.0"
     networks:
       - kafka-network
           
