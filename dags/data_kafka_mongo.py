@@ -107,7 +107,7 @@ with DAG(
 default_args={
 'email_on_failure': False,
 'email_on_retry': False,
-'execution_timeout': timedelta(minutes=10),
+'execution_timeout': timedelta(minutes=30),
 'retries': 3,
 'retry_delay':timedelta(minutes=3),
 },
