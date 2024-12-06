@@ -164,7 +164,7 @@ tags=['yes24'],
             task_id='sending_to_s3',
             python_callable=sending_to_s3,
             requirements=[
-                "git+https://github.com/Team1-TU-tech/crawling.git@0.3.6/dev/yes24",
+                "git+https://github.com/Team1-TU-tech/crawling.git@yes24",
                 "git+https://github.com/dpkp/kafka-python.git",
                 "redis"
                 ],
