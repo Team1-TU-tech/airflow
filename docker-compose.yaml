@@ -71,8 +71,8 @@ services:
       AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
       AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
       AWS_DEFAULT_REGION: ${AWS_DEFAULT_REGION}
-      MONGO_URI: ${MONGO_URI}
       DUMB_INIT_SETSID: "0"
+      LINE_TOKEN: ${LINE_TOKEN}
     restart: always
     env_file:
       - .env
@@ -82,8 +82,8 @@ services:
     deploy:
       resources:
         limits:
-          memory: 4g
-          cpus: "2.0"
+          memory: 6g
+          cpus: "4.0"
           
   airflow-triggerer:
     <<: *airflow-common
@@ -109,7 +109,6 @@ services:
           --lastname ${AIRFLOW_WWW_USER_LASTNAME} \
           --role Admin \
           --email ${AIRFLOW_WWW_USER_EMAIL} &&
-          airflow variables set MONGO_URI ${MONGO_URI} &&
           echo "Airflow Initialized"
     env_file:
       - .env
@@ -157,5 +156,7 @@ services:
       ZOOKEEPER_TICK_TIME: 2000
     restart: always
 
+
 volumes:
   postgres-db-volume:
+

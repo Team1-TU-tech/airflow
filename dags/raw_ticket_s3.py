@@ -5,16 +5,17 @@ from airflow.operators.python import PythonVirtualenvOperator
 import os
 
 def upload_to_s3():
-    from interpark.raw_open_page import extract_open_html
+    from interpark.raw_ticket_page import extract_ticket_html
     from airflow.providers.amazon.aws.hooks.s3 import S3Hook
     import io
-    get_data = extract_open_html()
+    get_data = extract_ticket_html()
     for data in get_data:
         if data is None:
             raise ValueError("extract_open_html()에서 None이 반환되었습니다.")
         hook = S3Hook(aws_conn_id='interpark')
         bucket_name = 't1-tu-data'
-        key = f'interpark/{data["num"]}.html'
+        print(f"{data['num']}_{data['ticket_num']}")
+        key = f'interpark/{data["num"]}_{data["ticket_num"]}.html'
         try:
             # 데이터를 문자열로 가정하고 io.StringIO로 처리
             soup = data["data"]  # 크롤링 데이터의 HTML 내용
@@ -42,16 +43,17 @@ def upload_to_s3():
             raise
 
 with DAG(
-'open_interpark_to_S3',
+'ticket_interpark_to_S3',
 default_args={
 'depends_on_past': False,
 'email_on_failure': False,
 'email_on_retry': False,
 'retries': 3,
-'retry_delay':timedelta(minutes=1),
+'retry_delay':timedelta(minutes=3),
 },
 description='interpark DAG',
 start_date=datetime(2024, 11, 21),
+schedule_interval='@daily',
 catchup=False,
 tags=['interpark','s3']
 ) as dag:
@@ -60,7 +62,7 @@ tags=['interpark','s3']
             task_id='upload_to_s3',
             python_callable=upload_to_s3,
             requirements=[
-                "git+https://github.com/hahahellooo/interpark.git@0.3/new_crawling"
+                "git+https://github.com/hahahellooo/interpark.git@0.4/s3"
                 ],
             system_site_packages=True,
             )
