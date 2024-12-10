@@ -8,6 +8,10 @@ from kafka import KafkaConsumer
 from pymongo import MongoClient
 import requests
 import json
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 def s3_to_kafka():
     from interpark.read_s3_parsing import html_parsing, extract_data, convert_to_datetime_format, get_region
@@ -21,7 +25,7 @@ def consumer_to_mongo():
     retry_count = 3
 
     try:
-        client = MongoClient("mongodb+srv://hahahello777:VIiYTK9NobgeM1hk@cluster0.5vlv3.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0")  # MongoDB 연결
+        client = MongoClient(so.getenv("MONGO_URI"))  # MongoDB 연결
         db = client['tut']  # 데이터베이스 이름
         collection = db['ticket']  # 컬렉션 이름
         print("MongoDB 연결 성공")

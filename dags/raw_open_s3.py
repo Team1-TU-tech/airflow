@@ -62,7 +62,7 @@ tags=['interpark','s3']
             task_id='upload_to_s3',
             python_callable=upload_to_s3,
             requirements=[
-                "git+https://github.com/hahahellooo/interpark.git@0.4/s3"
+                "git+https://github.com/hahahellooo/interpark.git@0.5/mongo"
                 ],
             system_site_packages=True,
             )
