@@ -6,7 +6,8 @@ x-airflow-common-env: &airflow-common-env
   AIRFLOW__CELERY__RESULT_BACKEND: "db+postgresql://airflow:airflow@postgres/airflow"
   AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: "false"
   AIRFLOW__CORE__LOAD_EXAMPLES: "false"
-  AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK: "true"
+  AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK:
+    "true"
     #AIRFLOW__WEBSERVER__DEFAULT_USER: "admin"
 
 x-airflow-common-volumes: &airflow-common-volumes
@@ -84,8 +85,8 @@ services:
     networks:
       - airflow_network
     command: celery worker
-    mem_limit: 4g
-    cpus: 2.0
+    mem_limit: 8g
+    cpus: 4.0
 
   # Airflow Triggerer
   airflow-triggerer:
@@ -106,8 +107,7 @@ services:
     image: apache/airflow:2.10.3
     container_name: airflow-init
     environment:
-      <<:
-        *airflow-common-env
+      <<: *airflow-common-env
     entrypoint: >
       bash -c "
       airflow db upgrade &&
@@ -134,7 +134,8 @@ services:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
       ZOOKEEPER_INIT_LIMIT: 10
-      ZOOKEEPER_SYNC_LIMIT: 5
+      ZOOKEEPER_SYNC_LIMIT:
+        5
         #volumes:
         #- ./zoo.cfg:/conf/zoo.cfg  # ZooKeeper 설정 파일
         #- ./zk_data:/var/lib/zookeeper/data  # 데이터 디렉토리 마운트
@@ -156,7 +157,8 @@ services:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
       ZOOKEEPER_INIT_LIMIT: 10
-      ZOOKEEPER_SYNC_LIMIT: 5
+      ZOOKEEPER_SYNC_LIMIT:
+        5
         #volumes:
         #- ./zoo.cfg:/conf/zoo.cfg  # ZooKeeper 설정 파일
         #- ./zk_data:/var/lib/zookeeper/data  # 데이터 디렉토리 마운트
@@ -178,7 +180,8 @@ services:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
       ZOOKEEPER_INIT_LIMIT: 10
-      ZOOKEEPER_SYNC_LIMIT: 5
+      ZOOKEEPER_SYNC_LIMIT:
+        5
         #volumes:
         #- ./zoo.cfg:/conf/zoo.cfg  # ZooKeeper 설정 파일
         #- ./zk_data:/var/lib/zookeeper/data  # 데이터 디렉토리 마운트
@@ -206,8 +209,8 @@ services:
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_MIN_INSYNC_REPLICAS: 1 # 설정 추가
-      KAFKA_REPLICA_LAG_TIME_MAX_MS: 10000  # 레플리카가 동기화되지 않은 상태로 허용할 최대 시간 (10초)
-      KAFKA_REPLICA_FETCH_MAX_WAIT_MS: 500  # 레플리카가 데이터를 가져오기 전 대기할 최대 시간 (500ms)
+      KAFKA_REPLICA_LAG_TIME_MAX_MS: 10000 # 레플리카가 동기화되지 않은 상태로 허용할 최대 시간 (10초)
+      KAFKA_REPLICA_FETCH_MAX_WAIT_MS: 500 # 레플리카가 데이터를 가져오기 전 대기할 최대 시간 (500ms)
     networks:
       - airflow_network
     deploy:
@@ -237,8 +240,8 @@ services:
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_MIN_INSYNC_REPLICAS: 1 # 설정 추가
-      KAFKA_REPLICA_LAG_TIME_MAX_MS: 10000  # 레플리카가 동기화되지 않은 상태로 허용할 최대 시간 (10초)
-      KAFKA_REPLICA_FETCH_MAX_WAIT_MS: 500  # 레플리카가 데이터를 가져오기 전 대기할 최대 시간 (500ms)
+      KAFKA_REPLICA_LAG_TIME_MAX_MS: 10000 # 레플리카가 동기화되지 않은 상태로 허용할 최대 시간 (10초)
+      KAFKA_REPLICA_FETCH_MAX_WAIT_MS: 500 # 레플리카가 데이터를 가져오기 전 대기할 최대 시간 (500ms)
     networks:
       - airflow_network
     deploy:
@@ -268,8 +271,8 @@ services:
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_MIN_INSYNC_REPLICAS: 1 # 설정 추가
-      KAFKA_REPLICA_LAG_TIME_MAX_MS: 10000  # 레플리카가 동기화되지 않은 상태로 허용할 최대 시간 (10초)
-      KAFKA_REPLICA_FETCH_MAX_WAIT_MS: 500  # 레플리카가 데이터를 가져오기 전 대기할 최대 시간 (500ms)
+      KAFKA_REPLICA_LAG_TIME_MAX_MS: 10000 # 레플리카가 동기화되지 않은 상태로 허용할 최대 시간 (10초)
+      KAFKA_REPLICA_FETCH_MAX_WAIT_MS: 500 # 레플리카가 데이터를 가져오기 전 대기할 최대 시간 (500ms)
     networks:
       - airflow_network
     deploy:
