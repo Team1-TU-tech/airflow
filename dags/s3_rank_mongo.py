@@ -1,6 +1,4 @@
 from airflow import DAG
-from airflow.providers.amazon.aws.transfers.s3_to_s3 import S3ToS3Operator
-from airflow.providers.mongo.hooks.mongo import MongoHook
 from airflow.operators.python import PythonOperator
 from datetime import datetime, timedelta
 import pandas as pd
@@ -8,7 +6,7 @@ import boto3
 from collections import Counter
 
 # MongoDB 연결
-mongo_hook = MongoHook(conn_id="mongodb_default")  # Airflow 연결으로 MongoDB 설정
+#mongo_hook = MongoHook(conn_id="mongodb_default")  # Airflow 연결으로 MongoDB 설정
 
 # S3에서 로그 읽기
 def get_logs_from_s3(bucket_name: str, file_key: str) -> list:

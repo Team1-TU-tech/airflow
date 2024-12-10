@@ -12,7 +12,7 @@ def upload_to_s3():
     for data in get_data:
         if data is None:
             raise ValueError("extract_open_html()에서 None이 반환되었습니다.")
-        hook = S3Hook(aws_conn_id='interpark')
+        hook = S3Hook(aws_conn_id='yes24')
         bucket_name = 't1-tu-data'
         print(data["num"])
         key = f'interpark/{data["num"]}.html'

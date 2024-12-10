@@ -22,7 +22,7 @@ def producer_to_kafka():
     import io
     import base64
     producer = KafkaProducer(
-            bootstrap_servers= ['kafka1:9093','kafka2:9094','kafka3:9095'],
+            bootstrap_servers= ['kafka1:9092','kafka2:9093','kafka3:9094'],
             value_serializer=lambda x: json.dumps(x).encode('utf-8')
         )
     topic = 'raw_interpark_data'
@@ -73,7 +73,7 @@ def kafka_to_s3():
         try:
             consumer = KafkaConsumer(
                 'raw_interpark_data',
-                bootstrap_servers= ['kafka1:9093','kafka2:9094','kafka3:9095'],
+                bootstrap_servers= ['kafka1:9092','kafka2:9093','kafka3:9094'],
                 auto_offset_reset="earliest",
                 group_id='interpark_s3',
                 value_deserializer=lambda x: json.loads(x.decode('utf-8')),
@@ -188,7 +188,7 @@ tags=['interpark','kafka','s3']
             task_id='producer.to.kafka',
             python_callable=producer_to_kafka,
             requirements=[
-                "git+https://github.com/hahahellooo/interpark.git@0.4/s3"
+                "git+https://github.com/hahahellooo/interpark.git@0.4/s3",
                 ],
             system_site_packages=True
             )
