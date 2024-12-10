@@ -76,6 +76,7 @@ services:
       - airflow-init
     networks:
       - kafka-network
+    ###########################추가
 
   airflow-worker:
     <<: *airflow-common
@@ -100,8 +101,11 @@ services:
     deploy:
       resources:
         limits:
-          memory: 6g
-          cpus: "4.0"
+          memory: 8g   # 메모리 한도를 8GB로 증가
+          cpus: "4.0"   # CPU 한도를 4개로 증가
+        reservations:
+          memory: 4g    # 최소 예약 메모리 4GB
+          cpus: "2.0"
     networks:
       - kafka-network
           

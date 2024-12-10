@@ -15,7 +15,7 @@ def upload_to_s3():
         hook = S3Hook(aws_conn_id='interpark')
         bucket_name = 't1-tu-data'
         print(f"{data['num']}_{data['ticket_num']}")
-        key = f'interpark/{data["num"]}_{data["ticket_num"]}.html'
+        key = f'interpark/click_{data["num"]}_{data["ticket_num"]}.html'
         try:
             # 데이터를 문자열로 가정하고 io.StringIO로 처리
             soup = data["data"]  # 크롤링 데이터의 HTML 내용
@@ -62,7 +62,7 @@ tags=['interpark','s3']
             task_id='upload_to_s3',
             python_callable=upload_to_s3,
             requirements=[
-                "git+https://github.com/hahahellooo/interpark.git@0.4/s3"
+                "git+https://github.com/hahahellooo/interpark.git@0.5/mongo"
                 ],
             system_site_packages=True,
             )

@@ -140,7 +140,7 @@ def kafka_to_s3():
 
 def success_noti():
     url = "https://notify-api.line.me/api/notify"
-    data = {"message":"airflow 작업 완료👍"}
+    data = {"message":"raw data 보내기 완료 👍"}
     headers={"Authorization": 'Bearer UuAPZM7msPnFaJt5wXTUx34JqYKO7n3AUlLq4b3eyZ4'}
     response = requests.post(url, data, headers=headers)
     print("#"*35)
@@ -150,7 +150,7 @@ def success_noti():
 
 def fail_noti():
     url = "https://notify-api.line.me/api/notify"
-    data = {"message":"airflow 작업 🔥실패🔥"}
+    data = {"message":"raw data 보내기 🔥실패🔥"}
     headers={"Authorization": 'Bearer UuAPZM7msPnFaJt5wXTUx34JqYKO7n3AUlLq4b3eyZ4'}
     response = requests.post(url, data, headers=headers)
     print("#"*35)
