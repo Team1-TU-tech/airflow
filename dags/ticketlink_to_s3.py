@@ -12,33 +12,30 @@ def sending_to_s3():
     print(f"Processing Task")
     print('*' * 30)
 
-    from crawling.utils import get_last_id_from_redis, update_last_id_in_redis
-    from crawling.links import get_link
-    
+    from crawling.valid_links import main, get_last_id_from_redis, update_last_id_in_redis
+ 
     # 링크 가져오기
-    last_id = get_last_id_from_redis('yes24')
-    links = get_link(start_id=last_id)
-    if links:
+    last_id = get_last_id_from_redis('ticketlink')
+    crawling_list = main()
+    if crawling_list:
         #URL에서 마지막 ID 추출
-        last_url = links[-1]  # 마지막 URL
-        last_processed_id = int(last_url.split('/')[-1])
-        update_last_id_in_redis('yes24', last_processed_id) #Redis에 저장
+        last_processed_id = crawling_list[-1]['ID']  # 마지막 항목에서 csoonID 추출
+        update_last_id_in_redis('ticketlink', last_processed_id) #Redis에 저장
         print(f"마지막 ID: {last_processed_id}")
     else:
         print("링크 리스트가 비어 있습니다.")
         return
 
-    # 데이터 수집
-    from crawling.all_crawler import all_scrap
-    data = all_scrap(links)
-    
     print("크롤링 데이터 수집 완료")
     
-    
-    for item in data:
+    from kafka import KafkaProducer
+    import json, io, base64
+    from airflow.providers.amazon.aws.hooks.s3 import S3Hook
+
+    for item in crawling_list:
         try:
             # 데이터를 문자열로 가정하고 io.StringIO로 처리
-            soup = item["data"]  # 크롤링 데이터의 HTML 내용
+            soup = item["HTML"]  # 크롤링 데이터의 HTML 내용
 
             # BeautifulSoup 객체를 HTML 문자열로 변환
             if hasattr(soup, "prettify"):
@@ -46,48 +43,41 @@ def sending_to_s3():
             else:
                 html_content = str(soup)  # 일반 문자열로 변환
 
+           
+            # S3Hook을 사용하여 AWS S3에 파일 업로드
+            hook = S3Hook(aws_conn_id='yes24')
+            timeout_seconds = 10  # 10초 대기
+
+            file_key = f"{item['ID']}.html"  # 파일 키 정의
+            s3_key = f"ticketlink/{file_key}"
             file_obj = io.BytesIO(html_content.encode('utf-8'))
             
-
-            from airflow.providers.amazon.aws.hooks.s3 import S3Hook
-            import io, time
-    
-            # S3 클라이언트 설정
-            hook = S3Hook(aws_conn_id='yes24') 
-            timeout_seconds = 10
-        
-        
-            file_key = f"{item['id']}.html"  # 파일 키 정의
-            s3_key = f"yes24/{file_key}"  # S3에서 사용할 파일 경로
-            file_obj = io.BytesIO(item['contents'])  # contents는 바이너리 데이터임
-                    
+            # Base64로 인코딩된 HTML 콘텐츠를 S3에 업로드
             hook.get_conn().put_object(
                 Bucket='t1-tu-data',
                 Key=s3_key,
-                Body=file_obj
+                Body=file_obj  # HTML을 그대로 업로드
             )
             print(f"S3에 파일 업로드 완료: {s3_key}")
-            
+
         except Exception as e:
             print(f"S3에 파일 업로드 실패: {e}")
-            continue
 
-    print("모든 파일 업로드 완료")
 
 with DAG(
-'yes24_to_MongoDB',
+'ticketlink_to_s3',
 default_args={
 'depends_on_past': False,
 'email_on_failure': False,
 'email_on_retry': False,
 'retries': 1,
 },
-description='yes24 티켓 정보를 크롤링해 S3에 적재하는 DAG',
+description='ticketlink 에서 크롤링하여 html 파일을 S3에 적재하는 DAG',
 schedule_interval='@daily',
-start_date=datetime(2024, 11, 25),
+start_date=datetime(2024, 11, 28),
 catchup=True,
 max_active_runs=3,  # 동시에 3개 크롤링 실행
-tags=['yes24'],
+tags=['ticketlink'],
 ) as dag:
 
     start = EmptyOperator(task_id='start')
@@ -97,13 +87,14 @@ tags=['yes24'],
             task_id='sending_to_s3',
             python_callable=sending_to_s3,
             requirements=[
-                "git+https://github.com/Team1-TU-tech/crawling.git@yes24",
+                "git+https://github.com/Team1-TU-tech/crawling.git@0.3.1/dev/ticketlink",
                 #"git+https://github.com/dpkp/kafka-python.git",
                 "redis"
                 ],
             system_site_packages=True,
             trigger_rule='all_success',
             )
+
 
     notify_success = BashOperator(
             task_id='notify.success',

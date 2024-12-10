@@ -4,3 +4,5 @@
 ```bash
 docker compose up -d
 ```
+
+- 티켓링크 데이터 s3에 적재 완료

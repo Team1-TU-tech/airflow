@@ -7,7 +7,7 @@ x-airflow-common-env: &airflow-common-env
   AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: "false"
   AIRFLOW__CORE__LOAD_EXAMPLES: "false"
   AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK: "true"
-  AIRFLOW__WEBSERVER__DEFAULT_USER: "true"
+    #AIRFLOW__WEBSERVER__DEFAULT_USER: "admin"
 
 x-airflow-common-volumes: &airflow-common-volumes
   - ${AIRFLOW_PROJ_DIR:-.}/dags:/opt/airflow/dags
@@ -84,11 +84,8 @@ services:
     networks:
       - airflow_network
     command: celery worker
-    deploy:
-      resources:
-        limits:
-          memory: 4g
-          cpus: "2.0"
+    mem_limit: 4g
+    cpus: 2.0
 
   # Airflow Triggerer
   airflow-triggerer:
@@ -111,9 +108,8 @@ services:
     environment:
       <<:
         *airflow-common-env
-        #AIRFLOW__WEBSERVER__DEFAULT_USER: "true"
     entrypoint: >
-      bash -c ""
+      bash -c "
       airflow db upgrade &&
       airflow users create \
       --username $AIRFLOW_USERNAME \
@@ -121,8 +117,7 @@ services:
       --lastname $AIRFLOW_LASTNAME \
       --role Admin \
       --email $AIRFLOW_EMAIL \
-      --password $AIRFLOW_PASSWORD &&
-      echo 'Airflow Initialization Complete'""
+      --password $AIRFLOW_PASSWORD"
     restart: "no"
     networks:
       - airflow_network
@@ -135,11 +130,17 @@ services:
       - "2181:2181"
     environment:
       ZOOKEEPER_SERVER_ID: 1
+      ZOOKEEPER_LISTENER_PORT: 2181
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
       ZOOKEEPER_INIT_LIMIT: 10
       ZOOKEEPER_SYNC_LIMIT: 5
-        #ZOOKEEPER_SERVERS: zookeeper1:2888:3888,zookeeper2:2888:3888,zookeeper3:2888:3888
+        #volumes:
+        #- ./zoo.cfg:/conf/zoo.cfg  # ZooKeeper 설정 파일
+        #- ./zk_data:/var/lib/zookeeper/data  # 데이터 디렉토리 마운트
+    extra_hosts:
+      - "zookeeper2:172.24.0.3"
+      - "zookeeper3:172.24.0.4"
     networks:
       - airflow_network
 
@@ -151,11 +152,17 @@ services:
       - "2182:2181"
     environment:
       ZOOKEEPER_SERVER_ID: 2
+      ZOOKEEPER_LISTENER_PORT: 2181
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
       ZOOKEEPER_INIT_LIMIT: 10
       ZOOKEEPER_SYNC_LIMIT: 5
-        #ZOOKEEPER_SERVERS: zookeeper1:2888:3888,zookeeper2:2888:3888,zookeeper3:2888:3888
+        #volumes:
+        #- ./zoo.cfg:/conf/zoo.cfg  # ZooKeeper 설정 파일
+        #- ./zk_data:/var/lib/zookeeper/data  # 데이터 디렉토리 마운트
+    extra_hosts:
+      - "zookeeper1:172.24.0.2"
+      - "zookeeper3:172.24.0.4"
     networks:
       - airflow_network
 
@@ -167,11 +174,17 @@ services:
       - "2183:2181"
     environment:
       ZOOKEEPER_SERVER_ID: 3
+      ZOOKEEPER_LISTENER_PORT: 2181
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
       ZOOKEEPER_INIT_LIMIT: 10
       ZOOKEEPER_SYNC_LIMIT: 5
-        #ZOOKEEPER_SERVERS: zookeeper1:2888:3888,zookeeper2:2888:3888,zookeeper3:2888:3888
+        #volumes:
+        #- ./zoo.cfg:/conf/zoo.cfg  # ZooKeeper 설정 파일
+        #- ./zk_data:/var/lib/zookeeper/data  # 데이터 디렉토리 마운트
+    extra_hosts:
+      - "zookeeper1:172.24.0.2"
+      - "zookeeper2:172.24.0.3"
     networks:
       - airflow_network
 
@@ -188,12 +201,23 @@ services:
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper1:2181,zookeeper2:2181,zookeeper3:2181
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka1:9092
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
-      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 2
-      KAFKA_MIN_INSYNC_REPLICAS: 2 # 설정 추가
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_MIN_INSYNC_REPLICAS: 1 # 설정 추가
+      KAFKA_REPLICA_LAG_TIME_MAX_MS: 10000  # 레플리카가 동기화되지 않은 상태로 허용할 최대 시간 (10초)
+      KAFKA_REPLICA_FETCH_MAX_WAIT_MS: 500  # 레플리카가 데이터를 가져오기 전 대기할 최대 시간 (500ms)
     networks:
       - airflow_network
+    deploy:
+      resources:
+        limits:
+          memory: "4G"
+          cpus: "2"
+        reservations:
+          memory: "2G"
+          cpus: "1"
 
   # Kafka Broker 2
   kafka2:
@@ -208,12 +232,23 @@ services:
     environment:
       KAFKA_BROKER_ID: 2
       KAFKA_ZOOKEEPER_CONNECT: zookeeper1:2181,zookeeper2:2181,zookeeper3:2181
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9093
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka2:9093
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
-      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 2
-      KAFKA_MIN_INSYNC_REPLICAS: 2 # 설정 추가
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_MIN_INSYNC_REPLICAS: 1 # 설정 추가
+      KAFKA_REPLICA_LAG_TIME_MAX_MS: 10000  # 레플리카가 동기화되지 않은 상태로 허용할 최대 시간 (10초)
+      KAFKA_REPLICA_FETCH_MAX_WAIT_MS: 500  # 레플리카가 데이터를 가져오기 전 대기할 최대 시간 (500ms)
     networks:
       - airflow_network
+    deploy:
+      resources:
+        limits:
+          memory: "4G"
+          cpus: "2"
+        reservations:
+          memory: "2G"
+          cpus: "1"
 
   # Kafka Broker 3
   kafka3:
@@ -228,12 +263,23 @@ services:
     environment:
       KAFKA_BROKER_ID: 3
       KAFKA_ZOOKEEPER_CONNECT: zookeeper1:2181,zookeeper2:2181,zookeeper3:2181
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9094
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka3:9094
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
-      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 2
-      KAFKA_MIN_INSYNC_REPLICAS: 2 # 설정 추가
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_MIN_INSYNC_REPLICAS: 1 # 설정 추가
+      KAFKA_REPLICA_LAG_TIME_MAX_MS: 10000  # 레플리카가 동기화되지 않은 상태로 허용할 최대 시간 (10초)
+      KAFKA_REPLICA_FETCH_MAX_WAIT_MS: 500  # 레플리카가 데이터를 가져오기 전 대기할 최대 시간 (500ms)
     networks:
       - airflow_network
+    deploy:
+      resources:
+        limits:
+          memory: "4G"
+          cpus: "2"
+        reservations:
+          memory: "2G"
+          cpus: "1"
 
   # Kafka UI
   kafka-ui:

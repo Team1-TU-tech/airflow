@@ -9,15 +9,23 @@ os.environ['LC_ALL'] = 'C'
 
 
 def mongodb():
-    #from airflow.providers.amazon.aws.hooks.s3 import S3Hook
     from ocr.img_to_text import s3_to_mongodb
+    from ocr.utils import get_last_id_from_redis, update_last_id_in_redis
 
-    #hook = S3Hook(aws_conn_id='yes24') 
-    
     print('*' * 30)
     print(f"Sending to Mongodb")
     print('*' * 30)
-    to_mongo = s3_to_mongodb()
+    last_id = get_last_id_from_redis('yes24_mongo')
+    to_mongo = s3_to_mongodb(start_id=last_id)
+
+    if to_mongo:
+        last_processed_id = int(to_mongo)
+        update_last_id_in_redis('yes24_mongo', last_processed_id)
+        print(f"마지막 ID: {last_processed_id}")
+    else:
+        print("값이 존재하지 않습니다.")
+        return
+
 
 with DAG(
 'yes24_s3_to_MongoDB',
@@ -29,7 +37,7 @@ default_args={
 },
 description='s3에 있는 yes24 데이터를 mongodb로 보내는 DAG',
 schedule_interval='@daily',
-start_date=datetime(2024, 11, 27),
+start_date=datetime(2024, 12, 6),
 catchup=True,
 max_active_runs=3,  # 동시에 3개 크롤링 실행
 tags=['yes24'],
@@ -42,7 +50,7 @@ tags=['yes24'],
             task_id='s3_to_mongodb',
             python_callable=mongodb,
             requirements=[
-                "git+https://github.com/Team1-TU-tech/ocr.git@0.1.1/dev/easyocr",
+                "git+https://github.com/Team1-TU-tech/ocr.git",
                 ],
             system_site_packages=True,
             trigger_rule='all_success',
