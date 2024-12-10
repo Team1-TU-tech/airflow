@@ -50,7 +50,7 @@ tags=['yes24'],
             task_id='s3_to_mongodb',
             python_callable=mongodb,
             requirements=[
-                "git+https://github.com/Team1-TU-tech/ocr.git@0.2.0/dev/easyocr",
+                "git+https://github.com/Team1-TU-tech/ocr.git",
                 ],
             system_site_packages=True,
             trigger_rule='all_success',

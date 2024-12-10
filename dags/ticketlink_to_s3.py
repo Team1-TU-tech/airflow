@@ -32,13 +32,6 @@ def sending_to_s3():
     import json, io, base64
     from airflow.providers.amazon.aws.hooks.s3 import S3Hook
 
-    # Kafka Producer 설정
-    producer = KafkaProducer(
-        bootstrap_servers=['kafka1:9092', 'kafka2:9093', 'kafka3:9094'],
-        value_serializer=lambda v: json.dumps(v, ensure_ascii=False).encode('utf-8'),
-    )
-    topic = 'ticketlink-data'  # Kafka Topic
-
     for item in crawling_list:
         try:
             # 데이터를 문자열로 가정하고 io.StringIO로 처리
@@ -67,22 +60,8 @@ def sending_to_s3():
             )
             print(f"S3에 파일 업로드 완료: {s3_key}")
 
-            # Kafka로 메시지 전송
-            message = {
-                "id": item['ID'],
-                "data_path": f"s3://t1-tu-data/ticketlink/{item['ID']}.html",
-                "contents": html_content
-            }
-
-            # 메시지가 정상적으로 직렬화되는지 확인
-            print(f"Kafka 전송 메시지: {message}")
-
-            # 메시지를 utf-8로 인코딩하여 전송
-            producer.send(topic, value=message)
-            print(f"Kafka 메시지 전송 완료 {message}")
-
         except Exception as e:
-            print(f"메시지 전송 실패: {e}")
+            print(f"S3에 파일 업로드 실패: {e}")
 
 
 with DAG(
@@ -93,7 +72,7 @@ default_args={
 'email_on_retry': False,
 'retries': 1,
 },
-description='ticketlink DAG',
+description='ticketlink 에서 크롤링하여 html 파일을 S3에 적재하는 DAG',
 schedule_interval='@daily',
 start_date=datetime(2024, 11, 28),
 catchup=True,
@@ -109,7 +88,7 @@ tags=['ticketlink'],
             python_callable=sending_to_s3,
             requirements=[
                 "git+https://github.com/Team1-TU-tech/crawling.git@0.3.1/dev/ticketlink",
-                "git+https://github.com/dpkp/kafka-python.git",
+                #"git+https://github.com/dpkp/kafka-python.git",
                 "redis"
                 ],
             system_site_packages=True,

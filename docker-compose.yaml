@@ -86,11 +86,6 @@ services:
     command: celery worker
     mem_limit: 4g
     cpus: 2.0
-      #deploy:
-      #resources:
-      #limits:
-      #memory: 4g
-      #cpus: "2.0"
 
   # Airflow Triggerer
   airflow-triggerer:
@@ -140,9 +135,9 @@ services:
       ZOOKEEPER_TICK_TIME: 2000
       ZOOKEEPER_INIT_LIMIT: 10
       ZOOKEEPER_SYNC_LIMIT: 5
-    volumes:
-      - ./zoo.cfg:/conf/zoo.cfg  # ZooKeeper 설정 파일
-      - ./zk_data:/var/lib/zookeeper/data  # 데이터 디렉토리 마운트
+        #volumes:
+        #- ./zoo.cfg:/conf/zoo.cfg  # ZooKeeper 설정 파일
+        #- ./zk_data:/var/lib/zookeeper/data  # 데이터 디렉토리 마운트
     extra_hosts:
       - "zookeeper2:172.24.0.3"
       - "zookeeper3:172.24.0.4"
@@ -162,9 +157,9 @@ services:
       ZOOKEEPER_TICK_TIME: 2000
       ZOOKEEPER_INIT_LIMIT: 10
       ZOOKEEPER_SYNC_LIMIT: 5
-    volumes:
-      - ./zoo.cfg:/conf/zoo.cfg  # ZooKeeper 설정 파일
-      - ./zk_data:/var/lib/zookeeper/data  # 데이터 디렉토리 마운트
+        #volumes:
+        #- ./zoo.cfg:/conf/zoo.cfg  # ZooKeeper 설정 파일
+        #- ./zk_data:/var/lib/zookeeper/data  # 데이터 디렉토리 마운트
     extra_hosts:
       - "zookeeper1:172.24.0.2"
       - "zookeeper3:172.24.0.4"
@@ -184,9 +179,9 @@ services:
       ZOOKEEPER_TICK_TIME: 2000
       ZOOKEEPER_INIT_LIMIT: 10
       ZOOKEEPER_SYNC_LIMIT: 5
-    volumes:
-      - ./zoo.cfg:/conf/zoo.cfg  # ZooKeeper 설정 파일
-      - ./zk_data:/var/lib/zookeeper/data  # 데이터 디렉토리 마운트
+        #volumes:
+        #- ./zoo.cfg:/conf/zoo.cfg  # ZooKeeper 설정 파일
+        #- ./zk_data:/var/lib/zookeeper/data  # 데이터 디렉토리 마운트
     extra_hosts:
       - "zookeeper1:172.24.0.2"
       - "zookeeper2:172.24.0.3"

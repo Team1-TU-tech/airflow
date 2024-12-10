@@ -31,17 +31,9 @@ def sending_to_s3():
     # 데이터 수집
     from crawling.all_crawler import all_scrap
     data = all_scrap(links)
+    
     print("크롤링 데이터 수집 완료")
     
-    from kafka import KafkaProducer
-    import json, io
-    # Kafka 전송
-    producer = KafkaProducer(
-        bootstrap_servers=['kafka1:9092', 'kafka2:9093', 'kafka3:9094'],
-        value_serializer=lambda v: json.dumps(v).encode('utf-8'),
-        acks='all'
-    )
-    topic = 'yes24-data' #topic 지정
     
     for item in data:
         try:
@@ -56,90 +48,31 @@ def sending_to_s3():
 
             file_obj = io.BytesIO(html_content.encode('utf-8'))
             
-            # Kafka 메시지 생성
-            message = {
-                "id": item['title'],
-                "data_path": f"s3://t1-tu-data/yes24/{item['title']}.html",
-                "contents": file_obj.getvalue()  # HTML 데이터를 contents로 전송
-            }
 
-            producer.send(topic, value=message)
-            producer.flush()
-            print(f"Kafka 메시지 전송 완료 {message}")
-
-        except Exception as e:
-            print(f"메시지 전송 실패: {e}")
-
-
-def upload_to_s3():
-    print('*' * 30)
-    print(f"Kafka Consuming")
-    print('*' * 30)
-
-    from airflow.providers.amazon.aws.hooks.s3 import S3Hook
-    import io, time
-    from kafka import KafkaConsumer
-
-    connected = False
-    while not connected:
-        try:
-            # Kafka Consumer 설정
-            consumer = KafkaConsumer(
-                'yes24-data',
-                bootstrap_servers=['kafka1:9092', 'kafka2:9093', 'kafka3:9094'],
-                auto_offset_reset='earliest',  # 새로운 메시지부터 소비
-                group_id='s3-upload-group',  # 동일한 그룹으로 소비
-                value_deserializer=lambda x: json.loads(x.decode('utf-8'))
-            )
-            connected = True
-            print("Kafka 연결 성공")
-
-        except Exception as e:
-            print(f"Kafka 연결 실패, 5초 후 재시도: {e}")
-            time.sleep(5)
+            from airflow.providers.amazon.aws.hooks.s3 import S3Hook
+            import io, time
     
-    # S3 클라이언트 설정
-    hook = S3Hook(aws_conn_id='yes24') 
-     # 메시지를 10초 동안 기다림
-    timeout_seconds = 10
-    start_time = time.time()
-
-    while True:
-        # Kafka Consumer에서 메시지를 폴링
-        messages = consumer.poll(timeout_ms=timeout_seconds * 5000)  # 타임아웃을 밀리초 단위로 설정
+            # S3 클라이언트 설정
+            hook = S3Hook(aws_conn_id='yes24') 
+            timeout_seconds = 10
         
-        if messages:
-            for message in consumer:
-                data = message.value  
-                file_key = f"{data['id']}.html"  # 파일 키 정의
-                s3_key = f"yes24/{file_key}"  # S3에서 사용할 파일 경로
-
-                # Kafka 메시지에서 contents를 가져와서 S3에 업로드
-                try:
-                    file_obj = io.BytesIO(data['contents'])  # contents는 바이너리 데이터임
-                    hook.get_conn().put_object(
-                        Bucket='t1-tu-data',
-                        Key=s3_key,
-                        Body=file_obj
-                    )
-                    print(f"S3에 파일 업로드 완료: {s3_key}")
-                    # 업로드된 파일 확인
-                    s3_client.head_object(Bucket='t1-tu-data', Key=s3_key)
-                    print(f"S3에 파일이 존재합니다: {s3_key}")
-                    break  # 업로드 및 확인이 성공하면 종료
+        
+            file_key = f"{item['id']}.html"  # 파일 키 정의
+            s3_key = f"yes24/{file_key}"  # S3에서 사용할 파일 경로
+            file_obj = io.BytesIO(item['contents'])  # contents는 바이너리 데이터임
+                    
+            hook.get_conn().put_object(
+                Bucket='t1-tu-data',
+                Key=s3_key,
+                Body=file_obj
+            )
+            print(f"S3에 파일 업로드 완료: {s3_key}")
             
-                except Exception as e:
-                    print(f"S3 업로드 실패: {e}")
-                    continue
-        else:
-            print(f"메시지가 없습니다. {timeout_seconds}초 후 다시 시도합니다.")
-            # 메시지가 없으면 10초 후 다시 시도 (타임아웃 후)
-            if time.time() - start_time > timeout_seconds:
-                print("타임아웃 발생, 종료.")
-                break  # 타임아웃 시 종료
-            else:
-                continue  # 계속 대기
-    
+        except Exception as e:
+            print(f"S3에 파일 업로드 실패: {e}")
+            continue
+
+    print("모든 파일 업로드 완료")
 
 with DAG(
 'yes24_to_MongoDB',
@@ -149,7 +82,7 @@ default_args={
 'email_on_retry': False,
 'retries': 1,
 },
-description='yes24 DAG',
+description='yes24 티켓 정보를 크롤링해 S3에 적재하는 DAG',
 schedule_interval='@daily',
 start_date=datetime(2024, 11, 25),
 catchup=True,
@@ -165,17 +98,10 @@ tags=['yes24'],
             python_callable=sending_to_s3,
             requirements=[
                 "git+https://github.com/Team1-TU-tech/crawling.git@yes24",
-                "git+https://github.com/dpkp/kafka-python.git",
+                #"git+https://github.com/dpkp/kafka-python.git",
                 "redis"
                 ],
             system_site_packages=True,
-            trigger_rule='all_success',
-            )
-
-
-    upload_to_s3 = PythonOperator(
-            task_id='upload_to_s3',
-            python_callable=upload_to_s3,
             trigger_rule='all_success',
             )
 
@@ -197,6 +123,6 @@ tags=['yes24'],
             trigger_rule='one_failed'
             )
 
-    start >> sending_to_s3 >> upload_to_s3
-    upload_to_s3 >> notify_success >> end
-    upload_to_s3 >> notify_fail >> end
+    start >> sending_to_s3
+    sending_to_s3 >> notify_success >> end
+    sending_to_s3 >> notify_fail >> end
