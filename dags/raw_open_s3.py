@@ -12,7 +12,7 @@ def upload_to_s3():
     for data in get_data:
         if data is None:
             raise ValueError("extract_open_html()에서 None이 반환되었습니다.")
-        hook = S3Hook(aws_conn_id='yes24')
+        hook = S3Hook(aws_conn_id='data')
         bucket_name = 't1-tu-data'
         print(data["num"])
         key = f'interpark/{data["num"]}.html'
@@ -62,7 +62,7 @@ tags=['interpark','s3']
             task_id='upload_to_s3',
             python_callable=upload_to_s3,
             requirements=[
-                "git+https://github.com/hahahellooo/interpark.git@0.4/s3"
+                "git+https://github.com/hahahellooo/interpark.git@0.5/mongo"
                 ],
             system_site_packages=True,
             )

@@ -30,6 +30,7 @@ def sending_to_s3():
 
     # 데이터 수집
     from crawling.all_crawler import all_scrap
+    import io, time
     data = all_scrap(links)
     
     print("크롤링 데이터 수집 완료")
@@ -50,16 +51,14 @@ def sending_to_s3():
             
 
             from airflow.providers.amazon.aws.hooks.s3 import S3Hook
-            import io, time
     
             # S3 클라이언트 설정
-            hook = S3Hook(aws_conn_id='yes24') 
+            hook = S3Hook(aws_conn_id='data') 
             timeout_seconds = 10
         
         
-            file_key = f"{item['id']}.html"  # 파일 키 정의
+            file_key = f"{item['title']}.html"  # 파일 키 정의
             s3_key = f"yes24/{file_key}"  # S3에서 사용할 파일 경로
-            file_obj = io.BytesIO(item['contents'])  # contents는 바이너리 데이터임
                     
             hook.get_conn().put_object(
                 Bucket='t1-tu-data',
@@ -75,7 +74,7 @@ def sending_to_s3():
     print("모든 파일 업로드 완료")
 
 with DAG(
-'yes24_to_MongoDB',
+'yes24_to_s3',
 default_args={
 'depends_on_past': False,
 'email_on_failure': False,

@@ -116,7 +116,7 @@ def kafka_to_s3():
                                 key = data['save_path']
                                 bucket_name = 't1-tu-data'
 
-                                hook = S3Hook(aws_conn_id='interpark')  # s3 연결
+                                hook = S3Hook(aws_conn_id='data')  # s3 연결
                                 hook.get_conn().put_object(
                                 Bucket=bucket_name,
                                 Key=key,

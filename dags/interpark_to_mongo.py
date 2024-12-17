@@ -8,6 +8,12 @@ from kafka import KafkaConsumer
 from pymongo import MongoClient
 import requests
 import json
+import os
+from dotenv import load_dotenv
+
+load_dotenv()  # .env 파일에서 변수 로드
+
+mongo_uri = os.getenv("MONGO_URI")
 
 def s3_to_kafka():
     from interpark.read_s3_parsing import html_parsing, extract_data, convert_to_datetime_format, get_region
@@ -21,9 +27,11 @@ def consumer_to_mongo():
     retry_count = 3
 
     try:
-        client = MongoClient("mongodb+srv://hahahello777:VIiYTK9NobgeM1hk@cluster0.5vlv3.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0")  # MongoDB 연결
+        client = MongoClient(mongo_uri)  # MongoDB 연결
         db = client['tut']  # 데이터베이스 이름
         collection = db['ticket']  # 컬렉션 이름
+        print(mongo_uri)
+        print(client)
         print("MongoDB 연결 성공")
     except Exception as e:
         print(f"MongoDB 연결 실패: {e}")
@@ -65,7 +73,7 @@ def consumer_to_mongo():
                             try:
                                 # Kafka에서 메시지를 가져오기
                                 data = data.value
-                                print(f"Kiafka에서 받은 데이터: {data}")
+                                print(f"Kafka에서 받은 데이터: {data}")
 
                                 collection.insert_one(data)
                                 print(f"mongodb에 데이터 저장 성공")
@@ -103,7 +111,7 @@ def fail_noti():
     return True
 
 with DAG(
-'s3_to_kafka_to_mongo',
+'interpark_to_mongo',
 default_args={
 'email_on_failure': False,
 'email_on_retry': False,

@@ -12,10 +12,10 @@ def upload_to_s3():
     for data in get_data:
         if data is None:
             raise ValueError("extract_open_html()에서 None이 반환되었습니다.")
-        hook = S3Hook(aws_conn_id='yes24')
+        hook = S3Hook(aws_conn_id='data')
         bucket_name = 't1-tu-data'
         print(f"{data['num']}_{data['ticket_num']}")
-        key = f'interpark/click_{data["num"]}_{data["ticket_num"]}.html'
+        key = f'interpark/{data["num"]}_{data["ticket_num"]}.html'
         try:
             # 데이터를 문자열로 가정하고 io.StringIO로 처리
             soup = data["data"]  # 크롤링 데이터의 HTML 내용

@@ -45,7 +45,7 @@ def sending_to_s3():
 
            
             # S3Hook을 사용하여 AWS S3에 파일 업로드
-            hook = S3Hook(aws_conn_id='yes24')
+            hook = S3Hook(aws_conn_id='data')
             timeout_seconds = 10  # 10초 대기
 
             file_key = f"{item['ID']}.html"  # 파일 키 정의
