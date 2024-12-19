@@ -16,10 +16,9 @@ load_dotenv()  # .env 파일에서 변수 로드
 mongo_uri = os.getenv("MONGO_URI")
 
 def s3_to_kafka():
-    from interpark.read_s3_parsing import html_parsing, extract_data, convert_to_datetime_format, get_region
-    message = html_parsing()
+    from crawling.read_s3_parsing import html_parsing, extract_data, convert_to_datetime_format, get_region
+    message = html_parsing(52879)
     print("데이터 불러오기 완료")
-
 
 def consumer_to_mongo():
     attempt = 0
@@ -28,8 +27,8 @@ def consumer_to_mongo():
 
     try:
         client = MongoClient(mongo_uri)  # MongoDB 연결
-        db = client['tut']  # 데이터베이스 이름
-        collection = db['ticket']  # 컬렉션 이름
+        db = client['test']  # 데이터베이스 이름
+        collection = db['test']  # 컬렉션 이름
         print(mongo_uri)
         print(client)
         print("MongoDB 연결 성공")
@@ -139,7 +138,7 @@ tags=['interpark','kafka','s3', 'mongoDB']
             task_id='s3.to.kafka',
             python_callable=s3_to_kafka,
             requirements=[
-                "git+https://github.com/hahahellooo/interpark.git@0.5/mongo"
+                "git+https://github.com/Team1-TU-tech/crawling.git@interpark"
                 ],
             system_site_packages=True
             )
