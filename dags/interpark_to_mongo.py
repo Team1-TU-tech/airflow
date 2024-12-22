@@ -17,7 +17,7 @@ mongo_uri = os.getenv("MONGO_URI")
 
 def s3_to_kafka():
     from crawling.read_s3_parsing import html_parsing, extract_data, convert_to_datetime_format, get_region
-    message = html_parsing(52879)
+    message = html_parsing(53614)
     print("데이터 불러오기 완료")
 
 def consumer_to_mongo():
@@ -27,8 +27,8 @@ def consumer_to_mongo():
 
     try:
         client = MongoClient(mongo_uri)  # MongoDB 연결
-        db = client['test']  # 데이터베이스 이름
-        collection = db['test']  # 컬렉션 이름
+        db = client['tut']  # 데이터베이스 이름
+        collection = db['data']  # 컬렉션 이름
         print(mongo_uri)
         print(client)
         print("MongoDB 연결 성공")
