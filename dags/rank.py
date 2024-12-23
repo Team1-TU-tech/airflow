@@ -13,10 +13,11 @@ from airflow.providers.amazon.aws.hooks.s3 import S3Hook
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from airflow.operators.empty import EmptyOperator
+import requests
 
 load_dotenv()
 
-def get_logs(bucket_name: str = "t1-tu-data", directory: str = 'view_detail_log/') -> List[str]:
+def get_logs(bucket_name: str, directory: str) -> List[str]:
     try:
         s3_hook = S3Hook(aws_conn_id='data')
         files = s3_hook.list_keys(bucket_name=bucket_name, prefix=directory)
@@ -50,6 +51,7 @@ def save_popular_to_db(ticket_ids: List[str]):
     try:
         # MongoDB 연결
         client = MongoClient(os.getenv('MONGO_URI'))
+        print(os.getenv('MONGO_URI'))
         db = client["tut"]
         popular_collection = db['popular']
         print("MongoDB connection OK")
@@ -85,14 +87,14 @@ def save_popular_to_db(ticket_ids: List[str]):
             print("MongoDB connection closed.")
 
 # DAG에서 사용할 함수
-def get_logs_save_to_db(bucket_name: str, directory: str):
+def get_logs_save_to_db(bucket_name: str = "t1-tu-data", directory: str = 'view_detail_log/'):
     ticket_ids = get_logs(bucket_name, directory)
     if ticket_ids:
         return save_popular_to_db(ticket_ids)
 
 def success_noti():                                                                    
     url = "https://notify-api.line.me/api/notify"
-    data = {"message":"rank DB에 저장 완료 👍"}    
+    data = {"message":"Rank DB에 저장 완료 👍"}    
     headers={"Authorization": 'Bearer UuAPZM7msPnFaJt5wXTUx34JqYKO7n3AUlLq4b3eyZ4'}
     response = requests.post(url, data, headers=headers)    
     print("#"*35)  
@@ -102,7 +104,7 @@ def success_noti():
 
 def fail_noti():
     url = "https://notify-api.line.me/api/notify"
-    data = {"message":"rank DB에 저장 🔥실패🔥"}
+    data = {"message":"Rank DB에 저장 🔥실패🔥"}
     headers={"Authorization": 'Bearer UuAPZM7msPnFaJt5wXTUx34JqYKO7n3AUlLq4b3eyZ4'}
     response = requests.post(url, data, headers=headers)
     print("#"*35)
