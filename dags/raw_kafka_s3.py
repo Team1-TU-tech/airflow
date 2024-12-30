@@ -159,7 +159,7 @@ def fail_noti():
     return True
 
 with DAG(
-'kafka_to_S3',
+'ticketlink_to_mongo',
 default_args={
 'depends_on_past': False,
 'email_on_failure': False,
