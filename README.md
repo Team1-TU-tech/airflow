@@ -2,6 +2,7 @@
 공연 데이터를 크롤링하여 S3에 저장하고, 전처리된 데이터를 MongoDB에 저장합니다. 배치 작업으로 유사 공연 추천, 인기 공연 추출, 중복 데이터 제거를 수행합니다.
 <br></br>
 ## 개요
+- 구성: Docker Compose로 Apache Airflow와 Apache Kafka를 구성
 - 데이터 수집: 3개 타겟 사이트에서 크롤링한 공연 데이터를 S3에 적재.
 - 데이터 전처리: S3 데이터를 전처리하여 MongoDB에 저장.
 - 추천 시스템: 유사 공연 추천 결과를 매일 배치 작업으로 생성하여 MongoDB에 저장.
@@ -11,7 +12,7 @@
 ## 목차
 - [기술스택](#기술스택)
 - [개발기간](#개발기간)
-- [DAG](#DAG)
+- [DAGs](#DAGs)
 - [실행요구사항](#실행요구사항)
 - [Contributors](#Contributors)
 - [License](#License)
@@ -23,13 +24,13 @@
 ## 개발기간
 `2024.11.18 ~ 2024.12.17(30일)`
 <br></br>
-## DAG
+## DAGs
 
 ![image](https://github.com/user-attachments/assets/edabd89d-cb94-40c3-bbde-a159deb3c8bb)
 
-### deduplication
+### Deduplication
 - MongoDB에 중복 데이터 저장 방지를 위해 매일 배치 작업이 이루어지며 중복 데이터를 삭제
-### interpark/yes24/ticketlink to S3
+### Interpark/Yes24/Ticketlink to S3
 - 3개 티켓 사이트의 HTML을 크롤링하고 Kafka에 메세지로 전달
 - consumer가 메세지를 전달받아 각 사이트의 고유번호를 파일 이름으로 S3에 저장
 - 매일 배치 작업
@@ -42,15 +43,17 @@
 ### Rank
 - S3에 저장된 로그 데이터를 읽어 인기 공연 추출
 - 추출한 데이터를 MongoDB에 저장
-  
-  
-  
-
-# 도커 백그라운드 실행
-docker compose up -d
+<br></br>
+## 실행요구사항
 ```
-### FastAPI 접속
-[localhost:7777](https://localhost:7777)
+# 도커 빌드
+$ docker compose build
+# 도커 백그라운드 실행
+$ docker compose up -d
+```
+### Airflow UI 접속 
+[localhost:8080](https://localhost:8080)
+<br></br>  
 ## Contributors
 `hahahellooo`, `hamsunwoo`, `oddsummer56`
 <br></br>
