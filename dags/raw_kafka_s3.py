@@ -159,7 +159,7 @@ def fail_noti():
     return True
 
 with DAG(
-'ticketlink_to_mongo',
+'interpark_kafka_to_mongo',
 default_args={
 'depends_on_past': False,
 'email_on_failure': False,
