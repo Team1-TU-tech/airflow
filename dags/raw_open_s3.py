@@ -5,10 +5,10 @@ from airflow.operators.python import PythonVirtualenvOperator
 import os
 
 def upload_to_s3():
-    from interpark.raw_open_page import extract_open_html
+    from crawling.raw_open_page import extract_open_html
     from airflow.providers.amazon.aws.hooks.s3 import S3Hook
     import io
-    get_data = extract_open_html()
+    get_data = extract_open_html(53868)
     for data in get_data:
         if data is None:
             raise ValueError("extract_open_html()에서 None이 반환되었습니다.")
@@ -62,7 +62,7 @@ tags=['interpark','s3']
             task_id='upload_to_s3',
             python_callable=upload_to_s3,
             requirements=[
-                "git+https://github.com/hahahellooo/interpark.git@0.5/mongo"
+                "git+https://github.com/Team1-TU-tech/crawling.git@interpark"
                 ],
             system_site_packages=True,
             )
