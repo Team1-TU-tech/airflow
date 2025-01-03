@@ -60,17 +60,6 @@ def save_popular_to_db(ticket_ids: List[str]):
         ticket_counter = Counter(ticket_ids)
         sorted_tickets = [{"ticket_id": ticket_id, "count": count} for ticket_id, count in ticket_counter.most_common()]
         print("Extract sorted_tickets done")
-        ##################################################################
-         # 오늘 날짜 이후인 end_date 필터링
-        today = datetime.now()
-        valid_tickets = []
-        for ticket in sorted_tickets:
-            ticket_data = tickets_collection.find_one({"ticket_id": ticket["ticket_id"]})
-            if ticket_data and ticket_data.get("end_date") and datetime.strptime(ticket_data["end_date"], "%Y-%m-%d") > today:
-                valid_tickets.append(ticket)
-
-        print(f"Filtered tickets with valid end_date: {valid_tickets}")
-        ##################################################################
 
         # 컬렉션에 데이터가 있는지 확인
         if popular_collection.count_documents({}) > 0:
@@ -98,7 +87,7 @@ def save_popular_to_db(ticket_ids: List[str]):
             print("MongoDB connection closed.")
 
 # DAG에서 사용할 함수
-def get_logs_save_to_db(bucket_name: str = "t1-tu-data", directory: str = 'view_detail_log/'):
+def get_logs_save_to_db(bucket_name: str = "t1-tu-data", directory: str = 'logs/View_detail_log/'):
     ticket_ids = get_logs(bucket_name, directory)
     if ticket_ids:
         return save_popular_to_db(ticket_ids)
@@ -151,7 +140,7 @@ tags=['rank','S3','FastAPI', 'mongoDB']
     save_rank = PythonOperator(
             task_id='save.rank',
             python_callable=get_logs_save_to_db,
-            op_kwargs={'bucket_name': "t1-tu-data", 'directory': "view_detail_log/"}
+            op_kwargs={'bucket_name': "t1-tu-data", 'directory': "logs/View_detail_log/"}
             )
 
     success_noti = PythonOperator(
